@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playball&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Coffee</title>
+  </head>
+  <body class="font-sans bg-coffee-100">
+    <!-- Header / Navbar -->
+    <header class="absolute top-0 left-0 z-50 w-full">
+      <!-- Container -->
+      <div
+        class="container mx-auto px-6 py-6 flex justify-between items-center"
+      >
+        <!-- logo -->
+        <a href="#" class="font-script text-4xl md:text-6xl text-white"
+          >Bean Scene</a
+        >
+
+        <!-- navigation -->
+        <nav class="hidden md:flex">
+          <ul class="flex space-x-8 items-center">
+            <li>
+              <a href="#home" class="nav-link">Home</a>
+            </li>
+            <li>
+              <a href="#menu" class="nav-link">Menu</a>
+            </li>
+            <li>
+              <a href="#about" class="nav-link">About Us</a>
+            </li>
+            <li>
+              <a href="#contact" class="nav-link">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- auth button -->
+        <div class="hidden md:flex space-x-6 items-center">
+          <a
+            href="#"
+            class="text-white hover:text-coffee-500 font-medium text-2xl font-serif"
+            >Sign In</a
+          >
+          <a
+            href="#"
+            class="bg-coffee-500 text-coffee-900 px-5 py-3 rounded-full font-bold text-lg hover:bg-coffee-600 transition font-serif"
+            >Sign Up</a
+          >
+        </div>
+
+        <!-- mobile menu button -->
+        <button class="md:hidden text-white">
+          <a href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-7"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </a>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="h-screen w-full bg-hero bg-cover bg-center relative flex items-center"
+    >
+      <!-- Hero container -->
+      <div class="container mx-auto px-10">
+        <div
+          class="flex flex-col md:items-start items-center max-w-2xl text-white font-serif text-center gap-10"
+        >
+          <h2 class="text-3xl md:text-4xl mb-6 md:text-left">
+            We've got your morning covered with
+          </h2>
+          <h1
+            class="font-script text-[6rem] md:text-[8rem] leading-none mb-10 text-center"
+          >
+            Coffee
+          </h1>
+          <p class="text-gray-200 text-xl md:text-2xl mb-6 md:text-left">
+            It is best to start your day with a cup of coffee. Discover the best
+            flavors coffee you will ever have. We provide the best for our
+            customer
+          </p>
+          <a href="#" class="btn-primary text-xl">Order Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Discover Section -->
+    <section id="about" class="py-20 md:py-30 relative overflow-hidden">
+      <!-- background Decoration Cup -->
+      <div
+        class="absolute -left-10 bottom-5 w-50 h-50 opacity-30 pointer-events-none -rotate-45 md:w-70 md:h-70"
+      >
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/924/924514.png"
+          alt=""
+        />
+      </div>
+
+      <!-- Discover container -->
+      <div
+        class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+      >
+        <!-- Discover Text -->
+        <div class="order-2 md:order-1 text-center md:text-left z-50">
+          <h2 class="section-title">Discover the best Coffee</h2>
+          <p
+            class="text-gray-600 mb-8 leading-8 tracking-wide text-xl md:text-3xl font-serif"
+          >
+            Bean Scene is a coffee shop that provides you with quality coffee
+            that helps boost your productivity and helps build your mood. Having
+            a cup of coffee is good, but having a cup of real coffee is greater.
+            There is no doubt that you will enjoy this coffee more than others
+            you have ever tasted
+          </p>
+          <a href="#" class="btn-primary">Learn More</a>
+        </div>
+        <!-- Coffee bean image -->
+        <div class="order-1 md:order-2 flex justify-center">
+          <img
+            src="https://images.unsplash.com/photo-1607980034923-cf74dc2fcf5c?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Coffee heart shape"
+            class="max-w-sm md:max-w-xl drop-shadow-2xl rounded-4xl"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-10">
+      <!-- Menu Container -->
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="section-title">Enjoy a new Blend of Coffee</h2>
+        <p class="text-gray-500 mb-12 text-lg">
+          Explore all flavours of coffee with us. There is always a new cup
+          worth experiencing.
+        </p>
+
+        <!-- Card Container -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Card 1 -->
+          <article
+            class="bg-coffee-500/20 border-2 border-coffee-500 shadow-sm hover:shadow-xl transition-shadow duration-300 relative group"
+          >
+            <!-- menu image -->
+            <div
+              class="h-60 w-full overflow-hidden mb-4 flex items-center justify-center"
+            >
+              <img
+                src="https://plus.unsplash.com/premium_photo-1673545518947-ddf3240090b1?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+                class="object-cover -translate-y-15 group-hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+
+            <!-- Card Text -->
+            <div>
+              <h3 class="font-serif text-3xl font-bold text-coffee-800">
+                Cappuccino
+              </h3>
+              <p class="text-xl font-serif mb-1">Coffee 50% | MIlk 50%</p>
+              <p class="font-bold font-serif text-2xl text-coffee-800 mb-2">
+                $8.50
+              </p>
+              <button
+                class="btn-primary font-serif font-bold text-xl translate-y-6"
+              >
+                Order Now
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article
+            class="bg-coffee-500/20 border-2 border-coffee-500 shadow-sm hover:shadow-xl transition-shadow duration-300 relative group"
+          >
+            <!-- menu image -->
+            <div
+              class="h-60 w-full overflow-hidden mb-4 flex items-center justify-center"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1578899952107-9c390f1af1b7?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+                class="object-cover -translate-y-15 group-hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+
+            <!-- Card Text -->
+            <div>
+              <h3 class="font-serif text-3xl font-bold text-coffee-800">
+                Chai Latte
+              </h3>
+              <p class="text-xl font-serif mb-1">Coffee 50% | MIlk 50%</p>
+              <p class="font-bold font-serif text-2xl text-coffee-800 mb-2">
+                $8.50
+              </p>
+              <button
+                class="btn-primary font-serif font-bold text-xl translate-y-6"
+              >
+                Order Now
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article
+            class="bg-coffee-500/20 border-2 border-coffee-500 shadow-sm hover:shadow-xl transition-shadow duration-300 relative group"
+          >
+            <!-- menu image -->
+            <div
+              class="h-60 w-full overflow-hidden mb-4 flex items-center justify-center"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1563390323222-b0593bfc85c3?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+                class="object-cover -translate-y-5 group-hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+
+            <!-- Card Text -->
+            <div>
+              <h3 class="font-serif text-3xl font-bold text-coffee-800">
+                Macchiato
+              </h3>
+              <p class="text-xl font-serif mb-1">Coffee 50% | MIlk 50%</p>
+              <p class="font-bold font-serif text-2xl text-coffee-800 mb-2">
+                $8.50
+              </p>
+              <button
+                class="btn-primary font-serif font-bold text-xl translate-y-6"
+              >
+                Order Now
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article
+            class="bg-coffee-500/20 border-2 border-coffee-500 shadow-sm hover:shadow-xl transition-shadow duration-300 relative group"
+          >
+            <!-- menu image -->
+            <div
+              class="h-60 w-full overflow-hidden mb-4 flex items-center justify-center"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1579992357154-faf4bde95b3d?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+                class="object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+
+            <!-- Card Text -->
+            <div>
+              <h3 class="font-serif text-3xl font-bold text-coffee-800">
+                Espresso
+              </h3>
+              <p class="text-xl font-serif mb-1">Coffee 50% | MIlk 50%</p>
+              <p class="font-bold font-serif text-2xl text-coffee-800 mb-2">
+                $8.50
+              </p>
+              <button
+                class="btn-primary font-serif font-bold text-xl translate-y-6"
+              >
+                Order Now
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Different Section -->
+    <section id="why-different" class="relative py-20">
+      <!-- background Decoration Cup -->
+      <div
+        class="absolute right-10 -top-5 w-50 h-50 opacity-30 pointer-events-none md:w-70 md:h-70 rotate-45"
+      >
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/924/924514.png"
+          alt=""
+        />
+      </div>
+
+      <!-- Why different Container -->
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="section-title">Why are we Different</h2>
+        <p class="text-gray-500 mb-12 text-lg">
+          We don't just make your coffee, we make your day!
+        </p>
+
+        <!-- Card Feature Container -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Card feature 1 -->
+          <div
+            class="bg-coffee-500/20 border border-coffee-500 hover:border-transparent transition-colors duration-300 flex flex-col items-center hover:bg-coffee-500/40"
+          >
+            <img
+              src="images/coffee-beans.png"
+              alt="Coffee bean"
+              class="w-25 h-25 mb-4 text-center mt-8"
+            />
+            <h3 class="font-serif text-3xl font-bold text-coffee-800">
+              Supreme Beans
+            </h3>
+            <p
+              class="font-serif text-2xl text-gray-500 max-w-50 leading-7 mt-3 mb-6"
+            >
+              Beans that provides great taste
+            </p>
+          </div>
+
+          <!-- Card feature 2 -->
+          <div
+            class="bg-coffee-500/20 border border-coffee-500 hover:border-transparent transition-colors duration-300 flex flex-col items-center hover:bg-coffee-500/40"
+          >
+            <img
+              src="images/badge.png"
+              alt="Coffee bean"
+              class="w-25 h-25 mb-4 text-center mt-8"
+            />
+            <h3 class="font-serif text-3xl font-bold text-coffee-800">
+              High Quality
+            </h3>
+            <p
+              class="font-serif text-2xl text-gray-500 max-w-50 leading-7 mt-3 mb-6"
+            >
+              We provide the Highest quality
+            </p>
+          </div>
+
+          <!-- Card feature 3 -->
+          <div
+            class="bg-coffee-500/20 border border-coffee-500 hover:border-transparent transition-colors duration-300 flex flex-col items-center hover:bg-coffee-500/40"
+          >
+            <img
+              src="images/hot-cup-of-tea.png"
+              alt="Coffee bean"
+              class="w-25 h-25 mb-4 text-center mt-8"
+            />
+            <h3 class="font-serif text-3xl font-bold text-coffee-800">
+              Extraordinary
+            </h3>
+            <p
+              class="font-serif text-2xl text-gray-500 max-w-50 leading-7 mt-3 mb-6"
+            >
+              Coffee like you have never tasted
+            </p>
+          </div>
+
+          <!-- Card feature 4 -->
+          <div
+            class="bg-coffee-500/20 border border-coffee-500 hover:border-transparent transition-colors duration-300 flex flex-col items-center hover:bg-coffee-500/40"
+          >
+            <img
+              src="images/best-price.png"
+              alt="Coffee bean"
+              class="w-25 h-25 mb-4 text-center mt-8"
+            />
+            <h3 class="font-serif text-3xl font-bold text-coffee-800">
+              Affordable Price
+            </h3>
+            <p
+              class="font-serif text-2xl text-gray-500 max-w-50 leading-7 mt-3 pb-6"
+            >
+              Our Coffee proces are easy to afford
+            </p>
+          </div>
+        </div>
+        <!-- Feature text / button -->
+        <div class="mt-10 text-center">
+          <p class="text-gray-500 text-2xl font-serif">
+            Great ideas start with great coffee, lets help you achieve that
+          </p>
+          <h1 class="font-bold font-serif text-4xl text-coffee-800">
+            Gets started today.
+          </h1>
+          <button class="btn-primary mt-6 px-8 font-serif font-bold text-xl">
+            Join Us
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Promo Section -->
+    <section
+      id="promo"
+      class="py-24 bg-promo object-fit bg-cover bg-center relative"
+    >
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black/40"></div>
+
+      <!-- Promo Container -->
+      <div
+        class="container mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center justify-between"
+      >
+        <!-- Promo Text -->
+        <div class="md:w-1/2 text-white text-center md:text-left">
+          <h2 class="font-serif text-4xl md:text-6xl font-bold mb-6">
+            Get a chance to have an Amazing morning
+          </h2>
+          <p class="text-gray-200 font-serif text-2xl md:text-3xl mb-8">
+            We are giving you are one time opportunity to experience a better
+            life with coffee
+          </p>
+          <button class="btn-primary">Order Now</button>
+        </div>
+
+        <!-- Floating cup Image -->
+        <div class="md:1/2 mt-10 md:mt-0 flex items-center justify-center">
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/16970/16970543.png"
+            alt=""
+            class="md:w-100 md:h-60 w-50 h-50 opacity-70 drop-shadow-2xl transform rotate-15"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 relative">
+      <!-- Testimonials Container -->
+      <div class="container mx-auto px-6 flex flex-col items-center">
+        <h2 class="section-title text-center">Our Coffe perfection feedback</h2>
+        <p class="font-serif text-2xl text-gray-500 mb-8 text-center">
+          Our customers has amazing things to say about us
+        </p>
+
+        <!-- Testimonials box container -->
+        <div
+          class="flex flex-col items-center max-w-4xl border border-coffee-500 bg-coffee-500/10 p-10 md:p-14 relative"
+        >
+          <!-- Quote -->
+          <div class="absolute top-8 left-8 opacity-60">
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/11042/11042333.png"
+              alt="Quote"
+              class="md:w-25 md:h-25 w-13"
+            />
+          </div>
+
+          <!-- Testimonials text -->
+          <p
+            class="text-gray-600 font-serif md:text-2xl text-lg text-center md:mb-8 mb-6 z-10 leading-relaxed md:pt-20 pt-15"
+          >
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1550's, when an unknown printer took a gakket of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electonic typesetting
+          </p>
+
+          <!-- Team member card -->
+          <div class="font-serif text-center">
+            <h4 class="text-coffee-800 text-2xl font-bold md:text-4xl">
+              Giovanni Paul Oro
+            </h4>
+            <p class="text-gray-500 text-xl md:text-2xl mb-10">
+              Project Manager
+            </p>
+            <img
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80"
+              alt="Giovanni Paul Oro"
+              class="md:w-30 md:h-30 w-20 h-20 rounded-lg absolute left-1/2 -translate-x-1/2"
+            />
+          </div>
+
+          <!-- Navigation Arrows -->
+          <button
+            class="absolute left-0 top-1/2 bg-coffee-500 rounded-lg flex items-center justify-center shadow-lg hover:bg-coffee-600 transition -translate-y-1/2 p-4 -translate-x-5 md:-translate-x-8"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/2099/2099238.png"
+              alt=""
+              class="w-5 h-5 md:w-7 md:h-7"
+            />
+          </button>
+          <button
+            class="absolute right-0 top-1/2 bg-coffee-500 rounded-lg flex items-center justify-center shadow-lg hover:bg-coffee-600 transition -translate-y-1/2 p-4 translate-x-5 md:translate-x-8"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/7903/7903573.png"
+              alt=""
+              class="w-5 h-5 md:w-7 md:h-7"
+            />
+          </button>
+          <div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Subscribe Section -->
+    <section class="py-20 relative bg-cover bg-center bg-subscribe">
+      <!-- Overlay -->
+      <div class="z-0 absolute inset-0 bg-coffee-600/40"></div>
+
+      <!-- Subscribe Container -->
+      <div
+        class="relative z-10 container mx-auto px-6 text-center text-white font-serif space-y-10"
+      >
+        <h2 class="section-title text-white">
+          Subscribe to get the Latest News
+        </h2>
+        <p class="text-xl md:text-3xl">
+          Don't miss out on our latest news, updates, tips and special offers
+        </p>
+
+        <!-- Form -->
+        <form
+          class="flex flex-col md:flex-row items-center justify-center max-w-xl gap-4 md:gap-0 mx-auto"
+        >
+          <input
+            type="email"
+            placeholder="Enter your mail"
+            class="w-full px-6 py-4 rounded-l-lg bg-white text-gray-800 outline-none focus:ring-1 focus:ring-coffee-600 md:text-3xl text-xl focus:border-coffee-500 md:border-r-0"
+          />
+          <button
+            type="button"
+            class="bg-coffee-500 flex-1 text-black w-full px-6 py-4 md:text-3xl rounded-lg md:rounded-l-none text-xl"
+          >
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-coffee-900 text-white pt-20">
+      <!-- Footer Container -->
+      <div
+        class="container mx-auto px-6 grid grid-cols-1 sm:grid-2 md:grid-cols-4 gap-12 font-serif"
+      >
+        <!-- Brand -->
+        <div class="space-y-6">
+          <a href="#" class="flex text-4xl md:text-6xl font-script"
+            >Bean Scene</a
+          >
+          <p class="text-xl md:text-2xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias non
+            nam incidunt illo veritatis consequuntur, ratione reprehenderit
+            asperiores odio sint?
+          </p>
+
+          <!-- Link Icon -->
+          <ul class="flex space-x-4">
+            <li>
+              <a href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="h-10 w-10 hover:text-coffee-500 rounded-full flex items-center justify-center transition-colors duration-300"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M13.001 19.9381C16.9473 19.446 20.001 16.0796 20.001 12C20.001 7.58172 16.4193 4 12.001 4C7.5827 4 4.00098 7.58172 4.00098 12C4.00098 16.0796 7.05467 19.446 11.001 19.9381V14H9.00098V12H11.001V10.3458C11.001 9.00855 11.1402 8.52362 11.4017 8.03473C11.6631 7.54584 12.0468 7.16216 12.5357 6.9007C12.9184 6.69604 13.3931 6.57252 14.2227 6.51954C14.5519 6.49851 14.9781 6.52533 15.501 6.6V8.5H15.001C14.0837 8.5 13.7052 8.54332 13.4789 8.66433C13.3386 8.73939 13.2404 8.83758 13.1653 8.97793C13.0443 9.20418 13.001 9.42853 13.001 10.3458V12H15.501L15.001 14H13.001V19.9381ZM12.001 22C6.47813 22 2.00098 17.5228 2.00098 12C2.00098 6.47715 6.47813 2 12.001 2C17.5238 2 22.001 6.47715 22.001 12C22.001 17.5228 17.5238 22 12.001 22Z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="h-10 w-10 hover:text-coffee-500 rounded-full flex items-center justify-center transition-colors duration-300"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12.001 9C10.3436 9 9.00098 10.3431 9.00098 12C9.00098 13.6573 10.3441 15 12.001 15C13.6583 15 15.001 13.6569 15.001 12C15.001 10.3427 13.6579 9 12.001 9ZM12.001 7C14.7614 7 17.001 9.2371 17.001 12C17.001 14.7605 14.7639 17 12.001 17C9.24051 17 7.00098 14.7629 7.00098 12C7.00098 9.23953 9.23808 7 12.001 7ZM18.501 6.74915C18.501 7.43926 17.9402 7.99917 17.251 7.99917C16.5609 7.99917 16.001 7.4384 16.001 6.74915C16.001 6.0599 16.5617 5.5 17.251 5.5C17.9393 5.49913 18.501 6.0599 18.501 6.74915ZM12.001 4C9.5265 4 9.12318 4.00655 7.97227 4.0578C7.18815 4.09461 6.66253 4.20007 6.17416 4.38967C5.74016 4.55799 5.42709 4.75898 5.09352 5.09255C4.75867 5.4274 4.55804 5.73963 4.3904 6.17383C4.20036 6.66332 4.09493 7.18811 4.05878 7.97115C4.00703 9.0752 4.00098 9.46105 4.00098 12C4.00098 14.4745 4.00753 14.8778 4.05877 16.0286C4.0956 16.8124 4.2012 17.3388 4.39034 17.826C4.5591 18.2606 4.7605 18.5744 5.09246 18.9064C5.42863 19.2421 5.74179 19.4434 6.17187 19.6094C6.66619 19.8005 7.19148 19.9061 7.97212 19.9422C9.07618 19.9939 9.46203 20 12.001 20C14.4755 20 14.8788 19.9934 16.0296 19.9422C16.8117 19.9055 17.3385 19.7996 17.827 19.6106C18.2604 19.4423 18.5752 19.2402 18.9074 18.9085C19.2436 18.5718 19.4445 18.2594 19.6107 17.8283C19.8013 17.3358 19.9071 16.8098 19.9432 16.0289C19.9949 14.9248 20.001 14.5389 20.001 12C20.001 9.52552 19.9944 9.12221 19.9432 7.97137C19.9064 7.18906 19.8005 6.66149 19.6113 6.17318C19.4434 5.74038 19.2417 5.42635 18.9084 5.09255C18.573 4.75715 18.2616 4.55693 17.8271 4.38942C17.338 4.19954 16.8124 4.09396 16.0298 4.05781C14.9258 4.00605 14.5399 4 12.001 4ZM12.001 2C14.7176 2 15.0568 2.01 16.1235 2.06C17.1876 2.10917 17.9135 2.2775 18.551 2.525C19.2101 2.77917 19.7668 3.1225 20.3226 3.67833C20.8776 4.23417 21.221 4.7925 21.476 5.45C21.7226 6.08667 21.891 6.81333 21.941 7.8775C21.9885 8.94417 22.001 9.28333 22.001 12C22.001 14.7167 21.991 15.0558 21.941 16.1225C21.8918 17.1867 21.7226 17.9125 21.476 18.55C21.2218 19.2092 20.8776 19.7658 20.3226 20.3217C19.7668 20.8767 19.2076 21.22 18.551 21.475C17.9135 21.7217 17.1876 21.89 16.1235 21.94C15.0568 21.9875 14.7176 22 12.001 22C9.28431 22 8.94514 21.99 7.87848 21.94C6.81431 21.8908 6.08931 21.7217 5.45098 21.475C4.79264 21.2208 4.23514 20.8767 3.67931 20.3217C3.12348 19.7658 2.78098 19.2067 2.52598 18.55C2.27848 17.9125 2.11098 17.1867 2.06098 16.1225C2.01348 15.0558 2.00098 14.7167 2.00098 12C2.00098 9.28333 2.01098 8.94417 2.06098 7.8775C2.11014 6.8125 2.27848 6.0875 2.52598 5.45C2.78014 4.79167 3.12348 4.23417 3.67931 3.67833C4.23514 3.1225 4.79348 2.78 5.45098 2.525C6.08848 2.2775 6.81348 2.11 7.87848 2.06C8.94514 2.0125 9.28431 2 12.001 2Z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="h-10 w-10 hover:text-coffee-500 rounded-full flex items-center justify-center transition-colors duration-300"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M15.3499 5.55005C13.7681 5.55005 12.4786 6.81809 12.4504 8.39658L12.4223 9.97162C12.4164 10.3029 12.143 10.5667 11.8117 10.5608C11.7881 10.5604 11.7646 10.5586 11.7413 10.5554L10.1805 10.3426C8.12699 10.0625 6.15883 9.11736 4.27072 7.54411C3.67275 10.8538 4.84 13.1472 7.65342 14.916L9.40041 16.0142C9.68095 16.1906 9.7654 16.561 9.58903 16.8415C9.54861 16.9058 9.49636 16.9619 9.43504 17.0067L7.84338 18.1696C8.78973 18.229 9.68938 18.1875 10.435 18.0387C15.1526 17.0973 18.2897 13.547 18.2897 7.69109C18.2897 7.213 17.2774 5.55005 15.3499 5.55005ZM10.4507 8.3609C10.4983 5.69584 12.6735 3.55005 15.3499 3.55005C16.7132 3.55005 17.9465 4.10683 18.8348 5.0054C19.5462 5.00005 20.1514 5.17991 21.5035 4.35967C21.1693 6.00005 21.0034 6.71201 20.2897 7.69109C20.2897 15.3326 15.5926 19.0489 10.8264 20C7.5587 20.6522 2.80646 19.5815 1.44531 18.1587C2.13874 18.1054 4.95928 17.802 6.58895 16.6092C5.20994 15.6987 -0.278631 12.4681 3.32772 3.78642C5.02119 5.76307 6.73797 7.10855 8.47807 7.82286C9.63548 8.29798 9.91978 8.2885 10.4507 8.3609Z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- About -->
+        <div>
+          <h4 class="footer-title">About</h4>
+          <ul class="about-link">
+            <li>
+              <a href="#" class="hover-about">Menu</a>
+            </li>
+            <li>
+              <a href="#" class="hover-about">Features</a>
+            </li>
+            <li>
+              <a href="#" class="hover-about">News & Blogs</a>
+            </li>
+            <li>
+              <a href="#" class="hover-about">Help & Support</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div>
+          <h4 class="footer-title">Company</h4>
+          <ul class="company-link">
+            <li>
+              <a href="#" class="hover-company">How we work</a>
+            </li>
+            <li>
+              <a href="#" class="hover-company">Terms of Service</a>
+            </li>
+            <li>
+              <a href="#" class="hover-company">Pricing</a>
+            </li>
+            <li>
+              <a href="#" class="hover-company">FAQ</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact Us -->
+        <div>
+          <h4 class="footer-title">Contact Us</h4>
+          <address class="contact-link">
+            <p>
+              Akshya Nagar 1st Block 1st Cross, Rammurthy nagar,
+              Bangalore-560016
+            </p>
+            <p>+1 202-918-2132</p>
+            <p>orogiovannipaul@gmail.com</p>
+            <p>www.beanscene.com</p>
+          </address>
+        </div>
+        <div>
+          <h4></h4>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

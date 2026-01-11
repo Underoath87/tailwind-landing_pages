@@ -1,0 +1,53 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Custom Breakpoints */
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-sm: 976px;
+  --breakpoint-sm: 1440px;
+
+  /* Custom Colors */
+  --color-primary: #36656b;
+  --color-secondary: #62959c;
+  --color-dark: #3a5554;
+  --color-neutral: #4a6c6b;
+
+  /* Custom Fonts */
+  --font-serif: 'Playfair', serif;
+  --font-sans-serif: 'DM Sans', sans-serif;
+
+  --background-image-hero: url('https://i.pinimg.com/1200x/18/cd/73/18cd734c9b82e1200ee136004ef5e286.jpg');
+}
+
+@layer utilities {
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-center text-primary mb-12;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 font-semibold transition-all duration-200 flex items-center justify-center text-sm rounded-lg hover:bg-primary/70 hover:cursor-pointer;
+  }
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+.range-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #ef4444; /* red-500 */
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+}

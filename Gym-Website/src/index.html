@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="sscript.js" defer></script>
+
+    <title>Premier Gym & Fitness Studio</title>
+  </head>
+  <body>
+    <!-- HEADER AND NAVIGATION -->
+    <header
+      class="fixed w-full z-50 bg-gym-black/80 backdrop-blur-lg border-b border-white/10"
+    >
+      <!-- Logo, Navigation links, CTA Container -->
+      <div
+        class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between relative"
+      >
+        <!-- Logo -->
+        <a
+          href="#"
+          aria-label="Iron and Volt Home"
+          class="text-2xl font-display font-bold italic"
+        >
+          IRON <span class="text-gym-accent">&</span> VOLT
+        </a>
+
+        <!-- Navigation -->
+        <nav aria-label="Main Navigation" class="hidden md:block">
+          <ul class="flex space-x-8 text-sm font-medium text-zinc-400">
+            <li>
+              <a
+                href="#features"
+                class="hover:text-white transition-colors focus:text-white"
+                >Features</a
+              >
+            </li>
+            <li>
+              <a
+                href="#classes"
+                class="hover:text-white transition-colors focus:text-white"
+                >Classes</a
+              >
+            </li>
+            <li>
+              <a
+                href="#pricing"
+                class="hover:text-white transition-colors focus:text-white"
+                >Pricing</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <!-- CTA = call to action-->
+        <div class="flex items-center gap-4">
+          <!-- button -->
+          <a
+            href="#pricing"
+            class="hidden md:inline-block bg-white text-black px-6 py-2 rounded-full font-bold text-sm hover:bg-gym-accent transition-colors duration-200 focus:ring-2 focus:ring-gym-accent"
+            >Join Now</a
+          >
+
+          <!-- Mobile Button -->
+          <button
+            id="menu-btn"
+            type="button"
+            aria-label="Open mobile menu"
+            class="md:hidden text-white hover:cursor-pointer"
+          >
+            <svg
+              class="w-8 h-8"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <!-- Mobile menu -->
+        <div
+          id="menu"
+          class="pointer-events-none absolute left-0 right-0 top-20 h-screen w-full bg-gym-black/97 backdrop-blur-2xl opacity-0 -translate-x-10 transition-all duration-300 ease-out"
+        >
+          <div
+            class="flex h-full flex-col items-center justify-center space-y-20"
+          >
+            <a href="#features" class="text-xl font-bold hover:text-gym-accent"
+              >Features</a
+            >
+            <a href="#classes" class="text-xl font-bold hover:text-gym-accent"
+              >Classes</a
+            >
+            <a href="#pricing" class="text-xl font-bold hover:text-gym-accent"
+              >Pricing</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT-->
+    <main>
+      <!-- Hero Section -->
+      <section
+        id="hero"
+        aria-labelledby="hero-heading"
+        class="relative flex flex-col h-screen items-center justify-center overflow-hidden"
+      >
+        <!-- background Image -->
+        <div class="absolute inset-0 z-0">
+          <img
+            class="w-full h-full object-cover opacity-60"
+            src="https://images.unsplash.com/photo-1685633225077-820d5c7eb123?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          />
+          <!-- overlay gradient -->
+          <div
+            class="absolute inset-0 bg-linear-to-t from-gym-black via-gym-black/40 to-transparent"
+          ></div>
+        </div>
+
+        <!-- Hero Content Container -->
+        <div class="relative z-10 text-center max-w-4xl px-6">
+          <p
+            class="inline-block py-1 px-3 border border-gym-accent/30 rounded-full text-gym-accent text-xs font-bold tracking-widest mb-6 bg-gym-accent/10"
+          >
+            REDEFINE YOUR LIMITS
+          </p>
+          <h1
+            id="hero-heading"
+            class="text-6xl md:text-8xl mb-6 leading-tight text-balance font-bold"
+          >
+            SCULPT YOUR <br /><span
+              class="text-transparent bg-clip-text bg-linear-to-r from-white to-zinc-500"
+              >ULTIMATE FORM</span
+            >
+          </h1>
+          <p
+            class="text-zinc-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed"
+          >
+            Join the elite community dedicated to high-performance training.
+            State-of-the-art equipment, expert coaching, and a vibe that pushes
+            you further
+          </p>
+        </div>
+
+        <div
+          class="flex flex-col md:flex-row gap-4 justify-center items-center"
+        >
+          <a href="#pricing" class="btn-primary relative z-10"
+            >Start your trial</a
+          >
+          <a
+            href="#classes"
+            class="text-white hover:text-gym-accent font-medium px-6 py-3 transition-colors flex items-center gap-2 group z-10"
+            >View Classes
+            <span
+              class="group-hover:translate-x-1 transition-all transform"
+              aria-hidden="true"
+              >→</span
+            ></a
+          >
+        </div>
+      </section>
+
+      <!-- Stats Section (Using Definition List for Semantic Data) -->
+      <section
+        aria-labelledby="stats-heading"
+        class="border-y border-white/10 bg-zinc-900/30 backdrop-blur-sm"
+      >
+        <h2 id="stats-heading" class="sr-only">Gym Statistics</h2>
+        <!-- Stats section container -->
+        <div class="max-w-7xl mx-auto px-6 py-8 md:py-12">
+          <dl class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <!-- Stats Item 1 -->
+            <div>
+              <dt
+                class="text-xs md:text-sm lg:text-md text-zinc-500 uppercase tracking-widest mt-1 order-2"
+              >
+                Access
+              </dt>
+              <dd
+                class="text-3xl md:text-4xl lg:text-5xl font-bold text-white order-1 mb-1"
+              >
+                24/7
+              </dd>
+            </div>
+            <!-- Stats Item 2 -->
+            <div>
+              <dt
+                class="text-xs md:text-sm lg:text-md text-zinc-500 uppercase tracking-widest mt-1 order-2"
+              >
+                Expert Trainers
+              </dt>
+              <dd
+                class="text-3xl md:text-4xl lg:text-5xl font-bold text-white order-1 mb-1"
+              >
+                15+
+              </dd>
+            </div>
+            <!-- Stats Item 3 -->
+            <div>
+              <dt
+                class="text-xs md:text-sm lg:text-md text-zinc-500 uppercase tracking-widest mt-1 order-2"
+              >
+                Weekly Classes
+              </dt>
+              <dd
+                class="text-3xl md:text-4xl lg:text-5xl font-bold text-white order-1 mb-1"
+              >
+                50+
+              </dd>
+            </div>
+            <!-- Stats Item 4 -->
+            <div>
+              <dt
+                class="text-xs md:text-sm lg:text-md text-zinc-500 uppercase tracking-widest mt-1 order-2"
+              >
+                Member Results
+              </dt>
+              <dd
+                class="text-3xl md:text-4xl lg:text-5xl font-bold text-white order-1 mb-1"
+              >
+                100%
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section
+        aria-labelledby="features-heading"
+        id="features"
+        class="py-16 md:py-24 px-6 relative"
+      >
+        <!-- Feature Section Container -->
+        <div class="max-w-7xl mx-auto">
+          <!-- Title -->
+          <div class="mb-16">
+            <h2
+              id="features-heading"
+              class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
+            >
+              Why CHoose <span class="text-gym-accent">Us?</span>
+            </h2>
+            <div class="h-1 w-20 bg-gym-accent" role="presentation"></div>
+          </div>
+
+          <!-- Features grids -->
+          <ul class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Feature 1: Large -->
+            <li
+              class="md:col-span-2 card-layout group hover:border-gym-accent/50 transition-colors"
+            >
+              <article>
+                <div
+                  class="h-12 w-12 bg-zinc-800 rounded-lg flex items-center justify-center mb-6 text-gym-accent"
+                >
+                  <svg
+                    class="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M13 10V3L4 14h7v7l9-11h-7z"
+                    ></path>
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-3">Premium equipment</h3>
+                <p class="text-zinc-400">
+                  We feature the latest Technogym and Rogue Fitness equipment.
+                  From olympic lifting platforms to smart cardio machines, we
+                  have everything you need to hit your PRs.
+                </p>
+              </article>
+            </li>
+
+            <!-- Feature 2: Tall -->
+            <li
+              class="card-layout md:row-span-2 bg-[url('https://plus.unsplash.com/premium_photo-1670505062610-b9041ebe603c?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center relative overflow-hidden group"
+            >
+              <div
+                class="absolute inset-0 bg-black/70 group-hover:bg-black/50 transition-all duration-500"
+                aria-hidden="true"
+              ></div>
+              <article class="relative z-10 h-full flex flex-col justify-end">
+                <h3 class="text-2xl font-bold mb-2">Personal Training</h3>
+                <p class="text-zinc-300 text-sm">
+                  Get 1 on 1 guidance from elite coaches who build custom plans
+                  for your body type
+                </p>
+              </article>
+            </li>
+
+            <!-- Feature 3: Normal -->
+            <li
+              class="card-layout group hover:border-gym-accent/50 transition-colors"
+            >
+              <article>
+                <h3
+                  class="text-xl font-bold mb-2 text-white group-hover:text-gym-accent transition-colors"
+                >
+                  Recovery Zone
+                </h3>
+                <p class="text-zinc-400 text-sm">
+                  Sauna, ice baths, and massage guns availbale for all members
+                </p>
+              </article>
+            </li>
+
+            <!-- Feature 4: Normal -->
+            <li
+              class="card-layout group hover:border-gym-accent/50 transition-colors"
+            >
+              <article>
+                <h3
+                  class="text-xl font-bold mb-2 text-white group-hover:text-gym-accent transition-colors"
+                >
+                  Smoothie bar
+                </h3>
+                <p class="text-zinc-400 text-sm">
+                  Sauna, ice baths, and massage guns availbale for all members
+                </p>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Classes Section -->
+      <section
+        id="classes"
+        aria-labelledby="classes-heading"
+        class="py-16 md:py-24 bg-zinc-900"
+      >
+        <!-- Classes Container -->
+        <div class="max-w-7xl mx-auto px-6">
+          <!-- Title -->
+          <div class="text-center mb-16">
+            <h2
+              id="classes-heading"
+              class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
+            >
+              Our <span class="text-white">Classes</span>
+            </h2>
+            <p class="text-zinc-400">From high intensity to deep stretch</p>
+          </div>
+
+          <!-- Classes Card Container-->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <article
+              class="group relative overflow-hidden rounded-2xl aspect-4/5"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1632758205645-732ee46c17fe?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="High-intensity interval training class with participants exercising"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <!-- overlay gradient -->
+              <div
+                class="absolute inset-0 bg-linear-to-t from-black via-transparent to-transparent opacity-90"
+                aria-hidden="true"
+              ></div>
+              <div class="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+                <h3 class="text-3xl font-bold italic mb-2 uppercase">
+                  HIT BURN
+                </h3>
+                <p class="text-zinc-300 text-sm mb-4">
+                  45 minutes of intense cardio and strenght intervals
+                </p>
+                <a
+                  href="#"
+                  class="inline-block text-gym-accent text-sm font-bold uppercase tracking-widest hover:text-white transition-colors"
+                  >View Schedule</a
+                >
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article
+              class="group relative overflow-hidden rounded-2xl aspect-4/5"
+            >
+              <img
+                src="https://plus.unsplash.com/premium_photo-1661582170363-0a42b3f5e3cb?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Powerlifting class with participants doing heavy compound lifts"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 cursor-pointer"
+              />
+              <!-- overlay gradient -->
+              <div
+                class="absolute inset-0 bg-linear-to-t from-black via-transparent to-transparent opacity-90"
+                aria-hidden="true"
+              ></div>
+              <div class="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+                <h3 class="text-3xl font-bold italic mb-2 uppercase">
+                  Power Lift
+                </h3>
+                <p class="text-zinc-300 text-sm mb-4">
+                  Focus on compound movements and heavy lifting
+                </p>
+                <a
+                  href="#"
+                  class="inline-block text-gym-accent text-sm font-bold uppercase tracking-widest hover:text-white transition-colors"
+                  >View Schedule</a
+                >
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article
+              class="group relative overflow-hidden rounded-2xl aspect-4/5"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Mobility and stretching class with participants doing flexibility exercises"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 cursor-pointer"
+              />
+              <!-- overlay gradient -->
+              <div
+                class="absolute inset-0 bg-linear-to-t from-black via-transparent to-transparent opacity-90"
+                aria-hidden="true"
+              ></div>
+              <div class="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+                <h3 class="text-3xl font-bold italic mb-2 uppercase">
+                  Mobility flow
+                </h3>
+                <p class="text-zinc-300 text-sm mb-4">
+                  Recover, stretch, and strengthen your core
+                </p>
+                <a
+                  href="#"
+                  class="inline-block text-gym-accent text-sm font-bold uppercase tracking-widest hover:text-white transition-colors"
+                  >View Schedule</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing Section -->
+      <section
+        id="pricing"
+        aria-labelledby="pricing-heading"
+        class="py-16 md:py-24 px-6 relative overflow-hidden"
+      >
+        <!-- Decorative Elemenet (Hidden from Screen Readers) -->
+        <div aria-hidden="true"></div>
+
+        <!-- Pricing Container -->
+        <div class="max-w-7xl mx-auto relative z-10">
+          <header class="text-center mb-16">
+            <h2
+              id="pricing-heading"
+              class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
+            >
+              Membership <span class="text-gym-accent">Plans</span>
+            </h2>
+            <p class="text-zinc-400">No hidden fees, Cancel anytime</p>
+          </header>
+
+          <!-- Card Pricing Container -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            <!-- Basic Plan -->
+            <article
+              class="card-layout flex flex-col hover:-translate-y-2 transition-transform duration-300"
+            >
+              <h3 class="text-zinc-400 font-bold text-sm tracking-wider mb-2">
+                Basic
+              </h3>
+              <div
+                class="text-4xl md:text-5xl font-bold mb-6 text-white md:mb-8"
+              >
+                $29 <span class="text-lg text-zinc-500 font-normal">/mo</span>
+              </div>
+              <ul
+                class="space-y-4 mb-8 text-zinc-300 text-sm md:text-base grow"
+              >
+                <li class="flex items-center gap-2">
+                  <span class="text-gym-accent">✓</span> Gym Access
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-gym-accent">✓</span> Locker Room
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-gym-accent">✓</span> Free Wifi
+                </li>
+                <li class="flex items-center gap-2 text-zinc-600">
+                  <span aria-hidden="true">✕</span>
+                  <span class="line-through decoration-zinc-600">
+                    Classes included</span
+                  >
+                </li>
+              </ul>
+              <a
+                href="#"
+                class="block text-center w-full py-3 border border-white/20 rounded-lg hover:bg-white hover:text-black transition-colors font-bold"
+                aria-label="Choose Basic plan for $29 per month"
+                >Choose Plan</a
+              >
+            </article>
+
+            <!-- Pro Plan -->
+            <article
+              class="card-layout flex flex-col hover:-translate-y-2 transition-transform duration-300 relative"
+            >
+              <div
+                class="absolute -top-3 -right-3 bg-gym-accent shadow-lg text-black text-xs font-bold uppercase px-3 py-1 rounded-bl-lg"
+                aria-label="Most Popular Plan"
+              >
+                Popular
+              </div>
+
+              <h3 class="font-bold text-sm tracking-wider mb-2 text-gym-accent">
+                Pro Athlete
+              </h3>
+              <div class="text-4xl font-bold mb-6 text-white">
+                $59 <span class="text-lg text-zinc-500 font-normal">/mo</span>
+              </div>
+              <ul
+                class="space-y-4 mb-8 text-zinc-300 text-sm md:text-base grow"
+              >
+                <li class="flex items-center gap-2">
+                  <span class="text-gym-accent">✓</span> 24/7 Gym Access
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-gym-accent">✓</span> All Classes Included
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-gym-accent">✓</span> Guest Pass (1/mo)
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-gym-accent">✓</span> 1 Personal Training
+                </li>
+              </ul>
+              <a
+                href="#"
+                class="block text-center w-full py-3 bg-gym-accent text-black border border-white/20 rounded-lg hover:bg-white hover:text-black transition-colors font-bold"
+                aria-label="Choose pro athlete plan for $59 per month - Most popular"
+                >Choose Plan</a
+              >
+            </article>
+
+            <!-- Elite Plan -->
+            <article
+              class="card-layout flex flex-col hover:-translate-y-2 transition-transform duration-300"
+            >
+              <h3 class="text-zinc-400 font-bold text-sm tracking-wider mb-2">
+                Elite
+              </h3>
+              <div class="text-4xl font-bold mb-6 text-white">
+                $99 <span class="text-lg text-zinc-500 font-normal">/mo</span>
+              </div>
+              <ul
+                class="space-y-4 mb-8 text-zinc-300 text-sm md:text-base grow"
+              >
+                <li class="flex items-center gap-2">
+                  <span class="text-gym-accent">✓</span> All Pro Benefits
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-gym-accent">✓</span> Unlimited Sauna/Ice
+                  Bath
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-gym-accent">✓</span> Monthly Nutrition Plan
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-gym-accent">✓</span> Priority Booking
+                </li>
+              </ul>
+              <a
+                href="#"
+                class="block text-center w-full py-3 border border-white/20 rounded-lg hover:bg-white hover:text-black transition-colors font-bold"
+                aria-label="Choose Elite plan for $99 per month"
+                >Choose Plan</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer
+        role="contentinfo"
+        class="bg-black py-8 md:py-12 border-t border-white/10"
+      >
+        <!-- footer Container -->
+        <div
+          class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8"
+        >
+          <!-- logo and text -->
+          <div class="col-span-1 md:col-span-2">
+            <a
+              href="#"
+              class="inline-block text-2xl font-display font-bold italic mb-4"
+              >IRON <span class="text-gym-accent">&</span> VOLT</a
+            >
+            <p class="text-zinc-500 max-w-sm">
+              The premier destination for fitness enthusiast. We don't just
+              build bodies, we build lifestyles.
+            </p>
+          </div>
+
+          <!-- Navigation -->
+          <nav aria-label="Footer Navigation">
+            <h4 class="font-bold text-white mb-4">Quick Links</h4>
+            <ul class="space-y-2 text-zinc-500 text-sm">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Trainers</a></li>
+              <li><a href="#">Schedule</a></li>
+              <li><a href="#">COntact</a></li>
+            </ul>
+          </nav>
+
+          <!-- Address and Social LInks -->
+          <div>
+            <h4 class="font-bold text-white mb-4">Visit Us</h4>
+            <address class="not-italic space-y-2 text-zinc-500 text-sm">
+              <p>2423 Ibayo Tipas</p>
+              <p>Taguig City, St 10001</p>
+              <p class="mt-4">
+                <a href="#" class="text-white hover:text-gym-accent"
+                  >orogiovannipaul@gmail.com</a
+                >
+              </p>
+            </address>
+
+            <div class="flex gap-4 mt-4">
+              <a href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="h-8 w-8 hover:text-gym-accent rounded-full flex items-center justify-center transition-colors duration-300"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M13.001 19.9381C16.9473 19.446 20.001 16.0796 20.001 12C20.001 7.58172 16.4193 4 12.001 4C7.5827 4 4.00098 7.58172 4.00098 12C4.00098 16.0796 7.05467 19.446 11.001 19.9381V14H9.00098V12H11.001V10.3458C11.001 9.00855 11.1402 8.52362 11.4017 8.03473C11.6631 7.54584 12.0468 7.16216 12.5357 6.9007C12.9184 6.69604 13.3931 6.57252 14.2227 6.51954C14.5519 6.49851 14.9781 6.52533 15.501 6.6V8.5H15.001C14.0837 8.5 13.7052 8.54332 13.4789 8.66433C13.3386 8.73939 13.2404 8.83758 13.1653 8.97793C13.0443 9.20418 13.001 9.42853 13.001 10.3458V12H15.501L15.001 14H13.001V19.9381ZM12.001 22C6.47813 22 2.00098 17.5228 2.00098 12C2.00098 6.47715 6.47813 2 12.001 2C17.5238 2 22.001 6.47715 22.001 12C22.001 17.5228 17.5238 22 12.001 22Z"
+                  ></path>
+                </svg>
+              </a>
+              <a href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="h-8 w-8 hover:text-gym-accent rounded-full flex items-center justify-center transition-colors duration-300"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12.001 9C10.3436 9 9.00098 10.3431 9.00098 12C9.00098 13.6573 10.3441 15 12.001 15C13.6583 15 15.001 13.6569 15.001 12C15.001 10.3427 13.6579 9 12.001 9ZM12.001 7C14.7614 7 17.001 9.2371 17.001 12C17.001 14.7605 14.7639 17 12.001 17C9.24051 17 7.00098 14.7629 7.00098 12C7.00098 9.23953 9.23808 7 12.001 7ZM18.501 6.74915C18.501 7.43926 17.9402 7.99917 17.251 7.99917C16.5609 7.99917 16.001 7.4384 16.001 6.74915C16.001 6.0599 16.5617 5.5 17.251 5.5C17.9393 5.49913 18.501 6.0599 18.501 6.74915ZM12.001 4C9.5265 4 9.12318 4.00655 7.97227 4.0578C7.18815 4.09461 6.66253 4.20007 6.17416 4.38967C5.74016 4.55799 5.42709 4.75898 5.09352 5.09255C4.75867 5.4274 4.55804 5.73963 4.3904 6.17383C4.20036 6.66332 4.09493 7.18811 4.05878 7.97115C4.00703 9.0752 4.00098 9.46105 4.00098 12C4.00098 14.4745 4.00753 14.8778 4.05877 16.0286C4.0956 16.8124 4.2012 17.3388 4.39034 17.826C4.5591 18.2606 4.7605 18.5744 5.09246 18.9064C5.42863 19.2421 5.74179 19.4434 6.17187 19.6094C6.66619 19.8005 7.19148 19.9061 7.97212 19.9422C9.07618 19.9939 9.46203 20 12.001 20C14.4755 20 14.8788 19.9934 16.0296 19.9422C16.8117 19.9055 17.3385 19.7996 17.827 19.6106C18.2604 19.4423 18.5752 19.2402 18.9074 18.9085C19.2436 18.5718 19.4445 18.2594 19.6107 17.8283C19.8013 17.3358 19.9071 16.8098 19.9432 16.0289C19.9949 14.9248 20.001 14.5389 20.001 12C20.001 9.52552 19.9944 9.12221 19.9432 7.97137C19.9064 7.18906 19.8005 6.66149 19.6113 6.17318C19.4434 5.74038 19.2417 5.42635 18.9084 5.09255C18.573 4.75715 18.2616 4.55693 17.8271 4.38942C17.338 4.19954 16.8124 4.09396 16.0298 4.05781C14.9258 4.00605 14.5399 4 12.001 4ZM12.001 2C14.7176 2 15.0568 2.01 16.1235 2.06C17.1876 2.10917 17.9135 2.2775 18.551 2.525C19.2101 2.77917 19.7668 3.1225 20.3226 3.67833C20.8776 4.23417 21.221 4.7925 21.476 5.45C21.7226 6.08667 21.891 6.81333 21.941 7.8775C21.9885 8.94417 22.001 9.28333 22.001 12C22.001 14.7167 21.991 15.0558 21.941 16.1225C21.8918 17.1867 21.7226 17.9125 21.476 18.55C21.2218 19.2092 20.8776 19.7658 20.3226 20.3217C19.7668 20.8767 19.2076 21.22 18.551 21.475C17.9135 21.7217 17.1876 21.89 16.1235 21.94C15.0568 21.9875 14.7176 22 12.001 22C9.28431 22 8.94514 21.99 7.87848 21.94C6.81431 21.8908 6.08931 21.7217 5.45098 21.475C4.79264 21.2208 4.23514 20.8767 3.67931 20.3217C3.12348 19.7658 2.78098 19.2067 2.52598 18.55C2.27848 17.9125 2.11098 17.1867 2.06098 16.1225C2.01348 15.0558 2.00098 14.7167 2.00098 12C2.00098 9.28333 2.01098 8.94417 2.06098 7.8775C2.11014 6.8125 2.27848 6.0875 2.52598 5.45C2.78014 4.79167 3.12348 4.23417 3.67931 3.67833C4.23514 3.1225 4.79348 2.78 5.45098 2.525C6.08848 2.2775 6.81348 2.11 7.87848 2.06C8.94514 2.0125 9.28431 2 12.001 2Z"
+                  ></path>
+                </svg>
+              </a>
+              <a href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="h-8 w-8 hover:text-gym-accent rounded-full flex items-center justify-center transition-colors duration-300"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M15.3499 5.55005C13.7681 5.55005 12.4786 6.81809 12.4504 8.39658L12.4223 9.97162C12.4164 10.3029 12.143 10.5667 11.8117 10.5608C11.7881 10.5604 11.7646 10.5586 11.7413 10.5554L10.1805 10.3426C8.12699 10.0625 6.15883 9.11736 4.27072 7.54411C3.67275 10.8538 4.84 13.1472 7.65342 14.916L9.40041 16.0142C9.68095 16.1906 9.7654 16.561 9.58903 16.8415C9.54861 16.9058 9.49636 16.9619 9.43504 17.0067L7.84338 18.1696C8.78973 18.229 9.68938 18.1875 10.435 18.0387C15.1526 17.0973 18.2897 13.547 18.2897 7.69109C18.2897 7.213 17.2774 5.55005 15.3499 5.55005ZM10.4507 8.3609C10.4983 5.69584 12.6735 3.55005 15.3499 3.55005C16.7132 3.55005 17.9465 4.10683 18.8348 5.0054C19.5462 5.00005 20.1514 5.17991 21.5035 4.35967C21.1693 6.00005 21.0034 6.71201 20.2897 7.69109C20.2897 15.3326 15.5926 19.0489 10.8264 20C7.5587 20.6522 2.80646 19.5815 1.44531 18.1587C2.13874 18.1054 4.95928 17.802 6.58895 16.6092C5.20994 15.6987 -0.278631 12.4681 3.32772 3.78642C5.02119 5.76307 6.73797 7.10855 8.47807 7.82286C9.63548 8.29798 9.91978 8.2885 10.4507 8.3609Z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="max-w-7xl mx-auto px-6 mt-12 border-t border-white/5 text-center text-zinc-600 text-sm"
+        >
+          <p class="mt-12">
+            &copy; 2025 Iron & Volt Fitness. All rights reserved
+          </p>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

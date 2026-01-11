@@ -1,0 +1,40 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Custom Screens */
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 976px;
+  --breakpoint-xl: 1440px;
+
+  /* Custom Colors */
+  --color-gym-black: #09090b;
+  --color-gym-dark: #18181b;
+  --color-gym-lime: #d9ff9d;
+  --color-gym-accent: #bef264;
+
+  /* Custom Fonts */
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Oswald', sans-serif;
+}
+
+/* Base Utilities */
+body {
+  @apply bg-gym-black text-white font-sans antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @apply font-display uppercase tracking-wider;
+}
+
+/* Semantic button styles */
+.btn-primary {
+  @apply inline-block bg-gym-accent text-gym-black font-bold py-3 px-8 rounded-full hover:bg-white transition-all duration-300 transform hover:-translate-y-1 shadow-[0_0_20px_rgba(190,242,100,0.3)] focus:outline-none focus:ring-2 focus:ring-white cursor-pointer;
+}
+
+.card-layout {
+  @apply bg-zinc-900/50 backdrop-blur-md border border-zinc-800 rounded-2xl p-8;
+}

@@ -1,0 +1,67 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Custom Breakpoints */
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1020px;
+  --breakpoint-xl: 1440px;
+
+  /* Custom Colors */
+  --color-coffee-100: #f9f5f0;
+  --color-coffee-400: #b68d60;
+  --color-coffee-500: #f9c06a;
+  --color-coffee-600: #e0a64e;
+  --color-coffee-800: #442817;
+  --color-coffee-900: #2e1f14;
+
+  /* Custom fonts */
+  --font-script: 'Playball', cursive;
+  --font-serif: 'Playfair', serif;
+  --font-sans: 'Poppins', sans-serif;
+
+  /* Hero background image */
+  --background-image-hero: url('https://images.unsplash.com/photo-1624526251132-14890c42f667?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+
+  --background-image-promo: url('https://images.unsplash.com/photo-1690983323021-f87a3272c881?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+
+  --background-image-subscribe: url('https://images.unsplash.com/photo-1691442098278-c1e4c5041db2?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+@layer components {
+  .nav-link {
+    @apply text-white hover:text-coffee-500 transition-colors duration-300 font-serif text-2xl tracking-wide;
+  }
+
+  .btn-primary {
+    @apply bg-coffee-500 text-coffee-900 font-semibold rounded-full px-6 py-3 shadow-md hover:bg-coffee-600 transition-all duration-300 inline-block;
+  }
+
+  .section-title {
+    @apply font-serif font-bold text-coffee-800 text-4xl md:text-7xl mb-4;
+  }
+
+  .footer-title {
+    @apply text-3xl font-bold mb-6;
+  }
+
+  .about-link {
+    @apply text-xl md:text-2xl space-y-3;
+  }
+
+  .company-link {
+    @apply text-xl md:text-2xl space-y-3;
+  }
+
+  .contact-link {
+    @apply text-xl md:text-2xl space-y-3;
+  }
+
+  .hover-about {
+    @apply hover:text-coffee-600;
+  }
+
+  .hover-company {
+    @apply hover:text-coffee-600;
+  }
+}
