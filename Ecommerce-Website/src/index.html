@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>SHop.CO</title>
+  </head>
+  <body class="text-neutral-900 bg-white">
+    <!-- TOP BANNER -->
+    <div class="bg-black text-white text-sm py-2.5 relative">
+      <div class="container-custom flex justify-center items-center">
+        <p>
+          Sign up get 20% off to your first order.
+          <a href="#" class="font-medium underline hover:text-neutral-300"
+            >Sign Up Now</a
+          >
+        </p>
+        <button class="absolute right-4 md:right-20 hover:text-neutral-300">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-50 bg-white py-6 border-b border-transparent">
+      <div
+        class="container-custom flex items-center justify-between gap-8 relative"
+      >
+        <div class="flex items-center gap-6">
+          <!-- Mobile menu -->
+          <button class="lg:hidden text-2xl">
+            <i class="fas fa-bars"></i>
+          </button>
+
+          <!-- Logo -->
+          <a href="#" class="text-3xl font-black upperacase tracking-tighter"
+            >SHOP.CO</a
+          >
+        </div>
+
+        <!-- Nav Links/Desktop -->
+        <nav
+          class="hidden lg:flex items-center gap-6 text-lg font-medium text-neutral-700"
+        >
+          <a href="#" class="hover:text-black flex items-center gap-1"
+            >Shop
+            <span
+              ><img
+                src="https://cdn-icons-png.flaticon.com/128/2985/2985150.png"
+                alt="Dropdown"
+                class="w-4" /></span
+          ></a>
+          <a href="#" class="hover:text-black">On Sale</a>
+          <a href="#" class="hover:text-black">New Arrivals</a>
+          <a href="#" class="hover:text-black">Brands</a>
+        </nav>
+
+        <!-- Search -->
+        <div
+          class="hidden lg:flex flex-1 max-w-lg bg-neutral-100 rounded-full px-4 py-4 items-center gap-3"
+        >
+          <i class="fa-solid fa-magnifying-glass text-neutral-400"></i>
+          <input
+            type="text"
+            placeholder="Search for products..."
+            class="font-sans-serif w-full bg-transparent text-sm outline-none placeholder-neutral-400"
+          />
+        </div>
+
+        <!-- CTA / Call to action -->
+        <div class="flex items-center gap-4 text-xl">
+          <button class="lg:hidden"><i class="fas fa-search"></i></button>
+          <a href="#" class="hover:text-neutral-600"
+            ><i class="fa-solid fa-cart-arrow-down"></i
+          ></a>
+          <a href="#" class="hover:text-neutral-600"
+            ><i class="fa-solid fa-circle-user"></i
+          ></a>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section
+      class="bg-[#F2F0F1] pt-10 md:pt-20 h-screen bg-hero object-cover bg-cover"
+    >
+      <!-- Hero container -->
+      <div
+        class="container-custom grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
+      >
+        <!-- Content -->
+        <div class="space-y-8 pb-10 lg:pb-20 md:pt-40">
+          <h1
+            class="text-5xl md:text-6xl lg:text-[64px] font-black leading-none uppercase"
+          >
+            Find clothes that matches your style
+          </h1>
+          <p
+            class="text-neutral-500 text-base md:text-lg font-medium leading-relaxed"
+          >
+            Browse through our diverse range meticulously crafted garments,
+            designed to bring out your individuality and cated to your sense of
+            style
+          </p>
+
+          <a
+            href="#"
+            class="bg-black inline-block text-white px-16 py-4 rounded-full font-medium hover:bg-neutral-800 transition-colors w-full md:w-auto text-center"
+            >Shop Now</a
+          >
+
+          <!-- Stats -->
+          <div class="flex flex-wrap gap-8 md:gap-12 pt-4">
+            <div
+              class="border-r pr-6 md:border-none md:pr-0 border-neutral-300"
+            >
+              <h3 class="text-3xl font-bold md:text-5xl">200+</h3>
+              <p class="text-base text-neutral-500 mt-1">
+                International Brands
+              </p>
+            </div>
+            <div>
+              <h3 class="text-3xl font-bold md:text-5xl">20,000+</h3>
+              <p class="text-base text-neutral-500 mt-1">
+                High-Quality Products
+              </p>
+            </div>
+            <div>
+              <h3 class="text-3xl font-bold md:text-5xl">30,000+</h3>
+              <p class="text-base text-neutral-500 mt-1">
+                International Brands
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- background Image -->
+        <div class="md:hidden">
+          <img src="images/hero-image.png" alt="" class="h-140" />
+        </div>
+      </div>
+    </section>
+
+    <!-- BRANDS BANNER -->
+    <div class="bg-black py-8"">
+      <div class="text-white container-custom flex flex-wrap justify-between items-center gap-8 px-4 opacity-80">
+        <span class="text-white text-2xl md:text-4xl font-sans-serif">VERSACE</span>
+        <span class="text-white text-2xl md:text-4xl font-sans-serif">ZARA</span>
+        <span class="text-white text-2xl md:text-4xl font-sans-serif">GUCCI</span>
+        <span class="text-white text-2xl md:text-4xl font-sans-serif">PRADA</span>
+        <span class="text-white text-2xl md:text-4xl font-sans-serif">CALVIN KLEIN</span>
+      </div>
+    </div>
+
+    <!-- NEW ARRIVAL SECTION -->
+     <section class="container-custom py-20 border-b border-neutral-200">
+      <h2 class="section-title">New Arrivals</h2>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        <!-- Product 1 -->
+         <article class="group cursor-pointer">
+          <div class="bg-[#F0EEED] rounded-4xl aspect-square overflow-hidden p-4 relative mb-4">
+            <img src="images/item1.png" alt="" class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-300">
+          </div>
+          <h3 class="text-base font-bold md:text-lg mb-1 truncate">T-shirt with Tape Details</h3>
+          <div class="flex items-center gap-1 mb-2 text-sm">
+            <div class="text-yellow-400 text-xs md:text-sm">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <span class="text-neutral-500 text-xs md:text-sm ml-1 font-sans-serif">4.5/5</span>
+            
+          </div>
+          <div class="md:text-2xl text-xl font-black font-sans-serif">$120</div>
+         </article>
+
+          <!-- Product 2 -->
+         <article class="group cursor-pointer">
+          <div class="bg-[#F0EEED] rounded-4xl aspect-square overflow-hidden p-4 relative mb-4">
+            <img src="images/item2.png" alt="" class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-300">
+          </div>
+          <h3 class="text-base font-bold md:text-lg mb-1 truncate">Long Sleeve checkered</h3>
+          <div class="flex items-center gap-1 mb-2 text-sm">
+            <div class="text-yellow-400 text-xs md:text-sm">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <span class="text-neutral-500 text-xs md:text-sm ml-1 font-sans-serif">4.5/5</span>
+            
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="md:text-2xl text-xl font-black font-sans-serif">$240</span>
+            <span class="text-neutral-400 font-bold line-through text-xl md:text-2xl">$260</span>
+            <span class="text-xs bg-red-200 py-1 px-3 rounded-full text-red-500 font-bold">-20%</span>
+          </div>
+         </article>
+
+          <!-- Product 3 -->
+         <article class="group cursor-pointer">
+          <div class="bg-[#F0EEED] rounded-4xl aspect-square overflow-hidden p-4 relative mb-4">
+            <img src="images/item3.png" alt="" class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-300">
+          </div>
+          <h3 class="text-base font-bold md:text-lg mb-1 truncate">Polo T-shirt</h3>
+          <div class="flex items-center gap-1 mb-2 text-sm">
+            <div class="text-yellow-400 text-xs md:text-sm">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <span class="text-neutral-500 text-xs md:text-sm ml-1 font-sans-serif">4.5/5</span>
+            
+          </div>
+          <div class="md:text-2xl text-xl font-black font-sans-serif">$180</div>
+         </article>
+
+          <!-- Product 4 -->
+         <article class="group cursor-pointer">
+          <div class="bg-[#F0EEED] rounded-4xl aspect-square overflow-hidden p-4 relative mb-4">
+            <img src="images/item4.png" alt="" class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-300">
+          </div>
+          <h3 class="text-base font-bold md:text-lg mb-1 truncate">Hood Jacket</h3>
+          <div class="flex items-center gap-1 mb-2 text-sm">
+            <div class="text-yellow-400 text-xs md:text-sm">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <span class="text-neutral-500 text-xs md:text-sm ml-1 font-sans-serif">4.5/5</span>
+            
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="md:text-2xl text-xl font-black font-sans-serif">$130</span>
+            <span class="text-neutral-400 font-bold line-through text-xl md:text-2xl">$160</span>
+            <span class="text-xs bg-red-200 py-1 px-3 rounded-full text-red-500 font-bold">-30%</span>
+          </div>
+         </article>
+      </div>
+     </section>
+
+
+  </body>
+</html>

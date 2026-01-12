@@ -1,0 +1,25 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Custom breakpoints */
+  --breakpoints-sm: 640px;
+  --breakpoints-md: 768px;
+  --breakpoints-lg: 1024px;
+  --breakpoints-xl: 1280px;
+  --breakpoints-2xl: 1536px;
+
+  /* Custom Font */
+  --font-sans-serif: 'Roboto', sans-serif;
+
+  --background-image-hero: url('images/hero-clothing-brand.jpg');
+}
+
+@layer components {
+  .container-custom {
+    @apply container mx-auto px-6;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-5xl font-black text-center mb-12 uppercase;
+  }
+}
