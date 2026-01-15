@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>SHop.CO Shooping Cart</title>
+  </head>
+  <body>
+    <!-- TOP BANNER -->
+    <div class="bg-black text-white text-sm py-2.5 relative">
+      <div class="container-custom flex justify-center items-center">
+        <p>
+          Sign up get 20% off to your first order.
+          <a href="#" class="font-medium underline hover:text-neutral-300"
+            >Sign Up Now</a
+          >
+        </p>
+        <button class="absolute right-4 md:right-20 hover:text-neutral-300">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-50 bg-white py-6">
+      <div
+        class="container-custom flex items-center justify-between gap-8 relative"
+      >
+        <div class="flex items-center gap-6">
+          <!-- Mobile menu -->
+          <button class="lg:hidden text-2xl">
+            <i class="fas fa-bars"></i>
+          </button>
+
+          <!-- Logo -->
+          <a href="#" class="text-3xl font-black upperacase tracking-tighter"
+            >SHOP.CO</a
+          >
+        </div>
+
+        <!-- Nav Links/Desktop -->
+        <nav
+          class="hidden lg:flex items-center gap-6 text-lg font-medium text-neutral-700"
+        >
+          <a href="#" class="hover:text-black flex items-center gap-1"
+            >Shop
+            <span
+              ><img
+                src="https://cdn-icons-png.flaticon.com/128/2985/2985150.png"
+                alt="Dropdown"
+                class="w-4" /></span
+          ></a>
+          <a href="#" class="hover:text-black">On Sale</a>
+          <a href="#" class="hover:text-black">New Arrivals</a>
+          <a href="#" class="hover:text-black">Brands</a>
+        </nav>
+
+        <!-- Search -->
+        <div
+          class="hidden lg:flex flex-1 max-w-lg bg-neutral-100 rounded-full px-4 py-4 items-center gap-3"
+        >
+          <i class="fa-solid fa-magnifying-glass text-neutral-400"></i>
+          <input
+            type="text"
+            placeholder="Search for products..."
+            class="font-sans-serif w-full bg-transparent text-sm outline-none placeholder-neutral-400"
+          />
+        </div>
+
+        <!-- CTA / Call to action -->
+        <div class="flex items-center gap-4 text-xl">
+          <button class="lg:hidden"><i class="fas fa-search"></i></button>
+          <a href="#" class="hover:text-neutral-600"
+            ><i class="fa-solid fa-cart-arrow-down"></i
+          ></a>
+          <a href="#" class="hover:text-neutral-600"
+            ><i class="fa-solid fa-circle-user"></i
+          ></a>
+        </div>
+      </div>
+    </header>
+
+    <!-- BREADCRUMBS -->
+    <div class="container mx-auto px-6 py-6 border-t-2 border-neutral-200">
+      <div class="flex items-center gap-2 text-sm text-gray-500">
+        <a href="#">Home</a>
+        <i class="fa-solid fa-chevron-right text-xs translate-y-0.5"></i>
+        <a href="#">Casual</a>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="container mx-auto px-6 pb-20">
+      <!-- Grid container main content -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
+        <!-- Sidebar section -->
+        <aside
+          class="hidden md:block md:col-span-3 border border-neutral-300 p-2 md:p-4 rounded-2xl"
+        >
+          <!-- Header -->
+          <div
+            class="flex items-center justify-between pb-6 mb-6 border-b border-neutral-300"
+          >
+            <h3 class="text-xl font-medium">Filters</h3>
+            <button>
+              <i class="fa-solid fa-sliders text-neutral-400"></i>
+            </button>
+          </div>
+
+          <!-- Categories -->
+          <div
+            class="space-y-4 border-b border-neutral-300 text-neutral-500 pb-6 mb-6"
+          >
+            <!-- Category 1 -->
+            <div class="flex items-center justify-between cursor-pointer group">
+              <span
+                class="text-base hover:text-black transition duration-300 font-medium"
+                >T-Shirts</span
+              >
+              <i
+                class="fa-solid fa-chevron-right opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:text-black"
+              ></i>
+            </div>
+
+            <!-- Category 2 -->
+            <div class="flex items-center justify-between cursor-pointer group">
+              <span
+                class="text-base hover:text-black transition duration-300 font-medium"
+                >Shorts</span
+              >
+              <i
+                class="fa-solid fa-chevron-right hover:text-black opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:text-black"
+              ></i>
+            </div>
+
+            <!-- Category 3-->
+            <div class="flex items-center justify-between cursor-pointer group">
+              <span
+                class="text-base hover:text-black transition duration-300 font-medium"
+                >Shirts</span
+              >
+              <i
+                class="fa-solid fa-chevron-right hover:text-black opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:text-black"
+              ></i>
+            </div>
+
+            <!-- Category 4 -->
+            <div class="flex items-center justify-between cursor-pointer group">
+              <span
+                class="text-base hover:text-black transition duration-300 font-medium"
+                >Hoodie</span
+              >
+              <i
+                class="fa-solid fa-chevron-right hover:text-black opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:text-black"
+              ></i>
+            </div>
+
+            <!-- Category 5 -->
+            <div class="flex items-center justify-between cursor-pointer group">
+              <span
+                class="text-base hover:text-black transition duration-300 font-medium"
+                >Jeans</span
+              >
+              <i
+                class="fa-solid fa-chevron-right hover:text-black opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:text-black"
+              ></i>
+            </div>
+          </div>
+
+          <!-- Price -->
+          <div class="border-b border-neutral-400 pb-6 mb-6">
+            <div class="flex items-center justify-between mb-4">
+              <h4 class="text-lg font-medium">Price</h4>
+              <i class="fa-solid fa-chevron-up text-neutral-500 text-sm"></i>
+            </div>
+            <div class="relative h-1.5 bg-gray-200 rounded-full mb-2">
+              <div
+                class="absolute left-1/4 right-1/4 bg-black h-full rounded-full"
+              ></div>
+              <div
+                class="absolute left-1/4 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-black"
+              ></div>
+              <div
+                class="absolute right-1/4 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-black"
+              ></div>
+            </div>
+            <div class="flex items-center justify-around font-medium text-sm">
+              <span>$50</span>
+              <span>$200</span>
+            </div>
+          </div>
+
+          <!-- Colors -->
+          <div class="border-b border-neutral-400 pb-6 mb-6">
+            <div class="flex items-center justify-between mb-4">
+              <h4 class="font-medium">Colors</h4>
+              <i class="fa-solid fa-chevron-up text-neutral-500 text-sm"></i>
+            </div>
+            <div class="grid grid-cols-5 gap-2">
+              <button class="color-button bg-green-500"></button>
+              <button class="color-button bg-red-500"></button>
+              <button class="color-button bg-yellow-500"></button>
+              <button class="color-button bg-blue-500"></button>
+              <button class="color-button bg-pink-500"></button>
+              <button class="color-button bg-teal-500"></button>
+              <button class="color-button bg-zinc-500"></button>
+              <button class="color-button bg-rose-500"></button>
+              <button class="color-button bg-white-500"></button>
+              <button class="color-button bg-black"></button>
+            </div>
+          </div>
+
+          <!-- Sizes -->
+          <div class="border-b border-neutral-300 pb-6 mb-6">
+            <div class="flex items-center justify-between">
+              <h4 class="font-medium mb-4">Sizes</h4>
+              <i class="fa-solid fa-chevron-up text-neutral-500 text-sm"></i>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <button
+                class="text-sm bg-gray-200 py-2 px-3 rounded-full hover:bg-black cursor-pointer hover:text-white transition-colors duration-200"
+              >
+                XX-Small
+              </button>
+              <button
+                class="text-sm bg-gray-200 py-2 px-3 rounded-full hover:bg-black cursor-pointer hover:text-white transition-colors duration-200"
+              >
+                X-Small
+              </button>
+              <button
+                class="text-sm bg-gray-200 py-2 px-3 rounded-full hover:bg-black cursor-pointer hover:text-white transition-colors duration-200"
+              >
+                Small
+              </button>
+              <button
+                class="text-sm bg-gray-200 py-2 px-3 rounded-full hover:bg-black cursor-pointer hover:text-white transition-colors duration-200"
+              >
+                Medium
+              </button>
+              <button
+                class="text-sm bg-gray-200 py-2 px-3 rounded-full hover:bg-black cursor-pointer hover:text-white transition-colors duration-200"
+              >
+                Large
+              </button>
+              <button
+                class="text-sm bg-gray-200 py-2 px-3 rounded-full hover:bg-black cursor-pointer hover:text-white transition-colors duration-200"
+              >
+                X-Large
+              </button>
+              <button
+                class="text-sm bg-gray-200 py-2 px-3 rounded-full hover:bg-black cursor-pointer hover:text-white transition-colors duration-200"
+              >
+                XX-Large
+              </button>
+              <button
+                class="text-sm bg-gray-200 py-2 px-3 rounded-full hover:bg-black cursor-pointer hover:text-white transition-colors duration-200"
+              >
+                3X-Large
+              </button>
+              <button
+                class="text-sm bg-gray-200 py-2 px-3 rounded-full hover:bg-black cursor-pointer hover:text-white transition-colors duration-200"
+              >
+                4X-Large
+              </button>
+            </div>
+          </div>
+
+          <!-- Dress Style -->
+          <div>
+            <div class="flex items-center justify-between">
+              <h4 class="font-medium mb-4">Dress Style</h4>
+              <i class="fa-solid fa-chevron-up text-neutral-500 text-sm"></i>
+            </div>
+            <div class="space-y-4 text-neutral-500 mb-4">
+              <!-- Category 1 -->
+              <div
+                class="flex items-center justify-between cursor-pointer group"
+              >
+                <span
+                  class="text-base hover:text-black transition duration-300 font-medium"
+                  >Casual</span
+                >
+                <i
+                  class="fa-solid fa-chevron-right opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:text-black"
+                ></i>
+              </div>
+
+              <!-- Category 2 -->
+              <div
+                class="flex items-center justify-between cursor-pointer group"
+              >
+                <span
+                  class="text-base hover:text-black transition duration-300 font-medium"
+                  >Formal</span
+                >
+                <i
+                  class="fa-solid fa-chevron-right hover:text-black opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:text-black"
+                ></i>
+              </div>
+
+              <!-- Category 3-->
+              <div
+                class="flex items-center justify-between cursor-pointer group"
+              >
+                <span
+                  class="text-base hover:text-black transition duration-300 font-medium"
+                  >Party</span
+                >
+                <i
+                  class="fa-solid fa-chevron-right hover:text-black opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:text-black"
+                ></i>
+              </div>
+
+              <!-- Category 4 -->
+              <div
+                class="flex items-center justify-between cursor-pointer group"
+              >
+                <span
+                  class="text-base hover:text-black transition duration-300 font-medium"
+                  >Gym</span
+                >
+                <i
+                  class="fa-solid fa-chevron-right hover:text-black opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:text-black"
+                ></i>
+              </div>
+            </div>
+            <button
+              class="w-full bg-black text-white py-2 rounded-full cursor-pointer hover:bg-black/80"
+            >
+              Apply Filter
+            </button>
+          </div>
+        </aside>
+
+        <!-- Product Grid Section -->
+        <div class="col-span-1 lg:col-span-9">
+          <!-- Header -->
+          <div class="flex flex-col gap-2 md:flex-row justify-between mb-6">
+            <h2 class="text-2xl md:text-4xl font-bold">Casual</h2>
+            <div class="flex items-center justify-between text-neutral-500">
+              <p>Showing 1-10 of 100 Products</p>
+              <p>
+                Sort by:<span
+                  >Most Popular
+                  <i class="fa-solid fa-chevron-down text-black"></i
+                ></span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Grid Products -->
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-10"
+          >
+            <!-- Product 1 -->
+            <article class="group cursor-pointer">
+              <div
+                class="bg-[#F0EEED] rounded-4xl aspect-square overflow-hidden p-4 relative mb-4"
+              >
+                <img
+                  src="images/item1.png"
+                  alt=""
+                  class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-300"
+                />
+              </div>
+              <h3 class="text-base font-bold md:text-lg mb-1 truncate">
+                T-shirt with Tape Details
+              </h3>
+              <div class="flex items-center gap-1 mb-2 text-sm">
+                <div class="text-yellow-400 text-xs md:text-sm">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half"></i>
+                </div>
+                <span
+                  class="text-neutral-500 text-xs md:text-sm ml-1 font-sans-serif"
+                  >4.5/5</span
+                >
+              </div>
+              <div class="md:text-2xl text-xl font-black font-sans-serif">
+                $120
+              </div>
+            </article>
+            <!-- Product 2 -->
+            <article class="group cursor-pointer">
+              <div
+                class="bg-[#F0EEED] rounded-4xl aspect-square overflow-hidden p-4 relative mb-4"
+              >
+                <img
+                  src="images/item2.png"
+                  alt=""
+                  class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-300"
+                />
+              </div>
+              <h3 class="text-base font-bold md:text-lg mb-1 truncate">
+                Long Sleeve checkered
+              </h3>
+              <div class="flex items-center gap-1 mb-2 text-sm">
+                <div class="text-yellow-400 text-xs md:text-sm">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half"></i>
+                </div>
+                <span
+                  class="text-neutral-500 text-xs md:text-sm ml-1 font-sans-serif"
+                  >4.5/5</span
+                >
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="md:text-2xl text-xl font-black font-sans-serif"
+                  >$240</span
+                >
+                <span
+                  class="text-neutral-400 font-bold line-through text-xl md:text-2xl"
+                  >$260</span
+                >
+                <span
+                  class="text-xs bg-red-200 py-1 px-3 rounded-full text-red-500 font-bold"
+                  >-20%</span
+                >
+              </div>
+            </article>
+
+            <!-- Product 3 -->
+            <article class="group cursor-pointer">
+              <div
+                class="bg-[#F0EEED] rounded-4xl aspect-square overflow-hidden p-4 relative mb-4"
+              >
+                <img
+                  src="images/item3.png"
+                  alt=""
+                  class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-300"
+                />
+              </div>
+              <h3 class="text-base font-bold md:text-lg mb-1 truncate">
+                Polo T-shirt
+              </h3>
+              <div class="flex items-center gap-1 mb-2 text-sm">
+                <div class="text-yellow-400 text-xs md:text-sm">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half"></i>
+                </div>
+                <span
+                  class="text-neutral-500 text-xs md:text-sm ml-1 font-sans-serif"
+                  >4.5/5</span
+                >
+              </div>
+              <div class="md:text-2xl text-xl font-black font-sans-serif">
+                $180
+              </div>
+            </article>
+
+            <!-- Product 4 -->
+            <article class="group cursor-pointer">
+              <div
+                class="bg-[#F0EEED] rounded-4xl aspect-square overflow-hidden p-4 relative mb-4"
+              >
+                <img
+                  src="images/item4.png"
+                  alt=""
+                  class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-300"
+                />
+              </div>
+              <h3 class="text-base font-bold md:text-lg mb-1 truncate">
+                Hood Jacket
+              </h3>
+              <div class="flex items-center gap-1 mb-2 text-sm">
+                <div class="text-yellow-400 text-xs md:text-sm">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half"></i>
+                </div>
+                <span
+                  class="text-neutral-500 text-xs md:text-sm ml-1 font-sans-serif"
+                  >4.5/5</span
+                >
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="md:text-2xl text-xl font-black font-sans-serif"
+                  >$130</span
+                >
+                <span
+                  class="text-neutral-400 font-bold line-through text-xl md:text-2xl"
+                  >$160</span
+                >
+                <span
+                  class="text-xs bg-red-200 py-1 px-3 rounded-full text-red-500 font-bold"
+                  >-30%</span
+                >
+              </div>
+            </article>
+
+            <!-- Product 5 -->
+            <article class="group cursor-pointer">
+              <div
+                class="bg-[#F0EEED] rounded-4xl aspect-square overflow-hidden p-4 relative mb-4"
+              >
+                <img
+                  src="images/item5.png"
+                  alt=""
+                  class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-300"
+                />
+              </div>
+              <h3 class="text-base font-bold md:text-lg mb-1 truncate">
+                Long Sleeve Levis
+              </h3>
+              <div class="flex items-center gap-1 mb-2 text-sm">
+                <div class="text-yellow-400 text-xs md:text-sm">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half"></i>
+                </div>
+                <span
+                  class="text-neutral-500 text-xs md:text-sm ml-1 font-sans-serif"
+                  >5.0/5</span
+                >
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="md:text-2xl text-xl font-black font-sans-serif"
+                  >$212</span
+                >
+                <span
+                  class="text-neutral-400 font-bold line-through text-xl md:text-2xl"
+                  >$232</span
+                >
+                <span
+                  class="text-xs bg-red-200 py-1 px-3 rounded-full text-red-500 font-bold"
+                  >-20%</span
+                >
+              </div>
+            </article>
+
+            <!-- Product 6 -->
+            <article class="group cursor-pointer">
+              <div
+                class="bg-[#F0EEED] rounded-4xl aspect-square overflow-hidden p-4 relative mb-4"
+              >
+                <img
+                  src="images/item6.png"
+                  alt=""
+                  class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-300"
+                />
+              </div>
+              <h3 class="text-base font-bold md:text-lg mb-1 truncate">
+                Skinny Jeans
+              </h3>
+              <div class="flex items-center gap-1 mb-2 text-sm">
+                <div class="text-yellow-400 text-xs md:text-sm">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half"></i>
+                </div>
+                <span
+                  class="text-neutral-500 text-xs md:text-sm ml-1 font-sans-serif"
+                  >4.0/5</span
+                >
+              </div>
+              <div class="md:text-2xl text-xl font-black font-sans-serif">
+                $145
+              </div>
+            </article>
+
+            <!-- Product 7 -->
+            <article class="group cursor-pointer">
+              <div
+                class="bg-[#F0EEED] rounded-4xl aspect-square overflow-hidden p-4 relative mb-4"
+              >
+                <img
+                  src="images/item7.png"
+                  alt=""
+                  class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-300"
+                />
+              </div>
+              <h3 class="text-base font-bold md:text-lg mb-1 truncate">
+                Hood Jacket Volcom
+              </h3>
+              <div class="flex items-center gap-1 mb-2 text-sm">
+                <div class="text-yellow-400 text-xs md:text-sm">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half"></i>
+                </div>
+                <span
+                  class="text-neutral-500 text-xs md:text-sm ml-1 font-sans-serif"
+                  >3.0/5</span
+                >
+              </div>
+              <div class="md:text-2xl text-xl font-black font-sans-serif">
+                $80
+              </div>
+            </article>
+
+            <!-- Product 8 -->
+            <article class="group cursor-pointer">
+              <div
+                class="bg-[#F0EEED] rounded-4xl aspect-square overflow-hidden p-4 relative mb-4"
+              >
+                <img
+                  src="images/item8.png"
+                  alt=""
+                  class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-300"
+                />
+              </div>
+              <h3 class="text-base font-bold md:text-lg mb-1 truncate">
+                Tribal Long Sleeve
+              </h3>
+              <div class="flex items-center gap-1 mb-2 text-sm">
+                <div class="text-yellow-400 text-xs md:text-sm">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half"></i>
+                </div>
+                <span
+                  class="text-neutral-500 text-xs md:text-sm ml-1 font-sans-serif"
+                  >4.5/5</span
+                >
+              </div>
+              <div class="md:text-2xl text-xl font-black font-sans-serif">
+                $210
+              </div>
+            </article>
+
+            <!-- Product 9 -->
+            <article class="group cursor-pointer">
+              <div
+                class="bg-[#F0EEED] rounded-4xl aspect-square overflow-hidden p-4 relative mb-4"
+              >
+                <img
+                  src="images/item6.png"
+                  alt=""
+                  class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-300"
+                />
+              </div>
+              <h3 class="text-base font-bold md:text-lg mb-1 truncate">
+                Skinny Jeans
+              </h3>
+              <div class="flex items-center gap-1 mb-2 text-sm">
+                <div class="text-yellow-400 text-xs md:text-sm">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half"></i>
+                </div>
+                <span
+                  class="text-neutral-500 text-xs md:text-sm ml-1 font-sans-serif"
+                  >4.0/5</span
+                >
+              </div>
+              <div class="md:text-2xl text-xl font-black font-sans-serif">
+                $145
+              </div>
+            </article>
+          </div>
+
+          <!-- Pagination -->
+          <div
+            class="flex items-center justify-between border-t border-neutral-300 pt-10"
+          >
+            <button
+              class="flex items-center gap-2 border px-4 py-1 rounded-xl border-neutral-300 hover:bg-black hover:text-white transition-all duration-300 cursor-pointer"
+            >
+              <i class="fa-solid fa-arrow-left"></i>
+              <span>Previous</span>
+            </button>
+            <div
+              class="flex items-center gap-3 cursor-pointer text-neutral-400"
+            >
+              <span class="hover:text-black">1</span>
+              <span class="hover:text-black">2</span>
+              <span class="hover:text-black">3</span>
+              <span>...</span>
+              <span class="hover:text-black">8</span>
+              <span class="hover:text-black">9</span>
+              <span class="hover:text-black">10</span>
+            </div>
+            <button
+              class="flex items-center gap-2 border px-4 py-1 rounded-xl border-neutral-300 hover:bg-black hover:text-white transition-all duration-300 cursor-pointer"
+            >
+              <span>Next</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer Wrapper -->
+    <div class="bg-[#F0F0F1] relative mt-20">
+      <!-- NEWSLETTER SECTION -->
+      <section class="container mx-auto px-6 -translate-y-1/2">
+        <div class="bg-black text-white p-6 md:pt-12 md:px-30 rounded-2xl">
+          <div
+            class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
+          >
+            <div class="text-center md:text-left">
+              <h1 class="text-2xl md:text-4xl font-black uppercase">
+                Stay upto date about
+              </h1>
+              <h1 class="text-2xl md:text-4xl font-black uppercase">
+                Our latest offers
+              </h1>
+            </div>
+            <form class="space-y-2">
+              <div
+                class="flex items-center gap-2 bg-white text-neutral-500 py-3 px-6 rounded-full w-xs border-0"
+              >
+                <i class="fa-regular fa-envelope"></i>
+                <input
+                  type="email"
+                  placeholder="Enter your email address"
+                  class="w-full outline-0"
+                />
+              </div>
+              <button
+                class="bg-white py-3 px-6 text-neutral-500 rounded-full w-xs cursor-pointer font-bold transition-colors duration-300 hover:text-black"
+              >
+                Subscribe to Newsletter
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="container mx-auto px-6 pb-20">
+        <div
+          class="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-8 border-b border-neutral-300 pb-10"
+        >
+          <!-- Grid 1 -->
+          <div class="space-y-3 block md:w-auto col-span-2 md:col-span-1">
+            <h1 class="text-3xl md:text-5xl font-black uppercase">Shop.co</h1>
+            <p class="text-base text-neutral-500 leading-tight mb-6">
+              We have clothes that suits your style and which you're proud to
+              wear. From women to men
+            </p>
+            <ul class="flex gap-2 cursor-pointer">
+              <li
+                class="flex items-center justify-center border border-neutral-300 rounded-full p-2 bg-white hover:bg-black hover:text-white transition-colors duration-300"
+              >
+                <i class="fa-brands fa-twitter"></i>
+              </li>
+              <li
+                class="flex items-center justify-center border border-neutral-300 rounded-full p-2 bg-white hover:bg-black hover:text-white transition-colors duration-300"
+              >
+                <i class="fa-brands fa-facebook"></i>
+              </li>
+              <li
+                class="flex items-center justify-center border border-neutral-300 rounded-full p-2 bg-white hover:bg-black hover:text-white transition-colors duration-300"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </li>
+              <li
+                class="flex items-center justify-center border border-neutral-300 rounded-full p-2 bg-white hover:bg-black hover:text-white transition-colors duration-300"
+              >
+                <i class="fa-brands fa-github"></i>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Grid 2 -->
+          <div class="space-y-4 md:pl-10">
+            <h4 class="md:text-lg font-medium text-sm uppercase">Company</h4>
+            <ul class="space-y-2 text-base">
+              <li>
+                <a href="#" class="text-neutral-500 hover:text-black">About</a>
+              </li>
+              <li>
+                <a href="#" class="text-neutral-500 hover:text-black"
+                  >Features</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-neutral-500 hover:text-black">Works</a>
+              </li>
+              <li>
+                <a href="#" class="text-neutral-500 hover:text-black">Career</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Grid 3 -->
+          <div class="space-y-4">
+            <h4 class="md:text-xl font-medium text-lg uppercase">Help</h4>
+            <ul class="space-y-2 text-base">
+              <li>
+                <a href="#" class="text-neutral-500 hover:text-black"
+                  >Customer Support</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-neutral-500 hover:text-black"
+                  >Delivery Details</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-neutral-500 hover:text-black"
+                  >Terms & Conditions</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-neutral-500 hover:text-black"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Grid 4 -->
+          <div class="space-y-4">
+            <h4 class="md:text-xl font-medium text-lg uppercase">Faq</h4>
+            <ul class="space-y-2 text-base">
+              <li>
+                <a href="#" class="text-neutral-500 hover:text-black"
+                  >Customer Support</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-neutral-500 hover:text-black"
+                  >Delivery Details</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-neutral-500 hover:text-black"
+                  >Terms & Conditions</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-neutral-500 hover:text-black"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Grid 5 -->
+          <div class="space-y-4">
+            <h4 class="md:text-xl font-medium text-lg uppercase">Resources</h4>
+            <ul class="space-y-2 text-base">
+              <li>
+                <a href="#" class="text-neutral-500 hover:text-black"
+                  >Free eBooks</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-neutral-500 hover:text-black"
+                  >Development Tutorial</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-neutral-500 hover:text-black"
+                  >How to Blog</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-neutral-500 hover:text-black"
+                  >Youtube Playlist</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="flex flex-col md:flex-row items-center justify-between mt-5"
+        >
+          <p class="mb-3">Shop.co @2000-2023 All Rights Reserved</p>
+          <div class="flex items-center gap-2">
+            <div href="#" class="px-3 rounded-lg bg-white">
+              <i class="fa-brands fa-cc-visa text-lg"></i>
+            </div>
+            <div class="flex items-center bg-white py-1 px-2 rounded-lg">
+              <!-- red -->
+              <div
+                class="w-4 h-4 rounded-full outline-0 bg-red-500 translate-x-1"
+              ></div>
+              <!-- brown -->
+              <div
+                class="w-4 h-4 rounded-full outline-0 bg-yellow-600 -translate-x-1 opacity-70"
+              ></div>
+            </div>
+            <div class="px-3 rounded-lg bg-white">
+              <a href="#">
+                <i class="fa-brands fa-cc-paypal text-lg"></i>
+              </a>
+            </div>
+            <div class="px-3 rounded-lg bg-white">
+              <a href="#">
+                <i class="fa-brands fa-apple-pay text-lg"></i>
+              </a>
+            </div>
+            <div class="px-3 rounded-lg bg-white">
+              <a href="#">
+                <i class="fa-brands fa-google-pay text-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

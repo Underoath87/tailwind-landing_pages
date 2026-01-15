@@ -22,4 +22,8 @@
   .section-title {
     @apply text-3xl md:text-5xl font-black text-center mb-12 uppercase;
   }
+
+  .color-button {
+    @apply w-8 h-8 rounded-full border border-gray-200 hover:scale-110 transition-transform duration-300 cursor-pointer;
+  }
 }
