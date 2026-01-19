@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -19,9 +19,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>SHop.CO Shooping Cart</title>
+    <title>Cart SHop.CO</title>
   </head>
-  <body>
+  <body class="bg-white text-black antialiased">
     <!-- TOP BANNER -->
     <div class="bg-black text-white text-sm py-2.5 relative">
       <div class="container-custom flex justify-center items-center">
@@ -38,7 +38,7 @@
     </div>
 
     <!-- NAVBAR -->
-    <header class="sticky top-0 z-50 bg-white py-6">
+    <header class="sticky top-0 z-50 bg-white py-6 border-b border-transparent">
       <div
         class="container-custom flex items-center justify-between gap-8 relative"
       >
@@ -86,7 +86,7 @@
         <!-- CTA / Call to action -->
         <div class="flex items-center gap-4 text-xl">
           <button class="lg:hidden"><i class="fas fa-search"></i></button>
-          <a href="#" class="hover:text-neutral-600"
+          <a href="shopping.html" class="hover:text-neutral-600"
             ><i class="fa-solid fa-cart-arrow-down"></i
           ></a>
           <a href="#" class="hover:text-neutral-600"
@@ -96,630 +96,601 @@
       </div>
     </header>
 
-    <!-- BREADCRUMBS -->
-    <div class="container mx-auto px-6 py-6 border-t-2 border-neutral-200">
-      <div class="flex items-center gap-2 text-sm text-gray-500">
-        <a href="#">Home</a>
-        <i class="fa-solid fa-chevron-right text-xs translate-y-0.5"></i>
-        <a href="#">Casual</a>
-      </div>
-    </div>
-
     <!-- MAIN CONTENT -->
-    <main class="container mx-auto px-6 pb-20">
-      <!-- Grid container main content -->
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
-        <!-- Sidebar section -->
-        <aside
-          class="hidden md:block md:col-span-3 border border-neutral-300 p-2 md:p-4 rounded-2xl"
-        >
-          <!-- Header -->
+    <main class="container mx-auto px-6 py-4">
+      <!-- BREADCRUMBS -->
+      <div class="container mx-auto px-6 py-6 border-t-2 border-neutral-200">
+        <div class="flex items-center gap-2 text-sm text-gray-500">
+          <a href="#">Home</a>
+          <i class="fa-solid fa-chevron-right text-xs translate-y-0.5"></i>
+          <a href="#">Shop</a>
+          <i class="fa-solid fa-chevron-right text-xs translate-y-0.5"></i>
+          <a href="Men">Men</a>
+          <i class="fa-solid fa-chevron-right text-xs translate-y-0.5"></i>
+          <a href="">T-Shirts</a>
+        </div>
+      </div>
+
+      <!-- PRODUCT SECTION -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mb-16">
+        <!-- Product images -->
+        <div class="flex flex-col-reverse md:flex-row gap-4">
+          <!-- Thumbnails -->
           <div
-            class="flex items-center justify-between pb-6 mb-6 border-b border-neutral-300"
+            class="flex md:flex-col gap-4 overflow-x-auto md:overflow-visible w-full md:w-50 shrink-0"
           >
-            <h3 class="text-xl font-medium">Filters</h3>
-            <button>
-              <i class="fa-solid fa-sliders text-neutral-400"></i>
+            <button
+              class="w-1/3 md:w-full aspect-square border border-transparent hover:border-neutral-500 overflow-hidden"
+            >
+              <img
+                src="https://i.pinimg.com/1200x/39/de/d6/39ded6028a7fdcb5c10cfd7117da9c9a.jpg"
+                alt=""
+                class="rounded-2xl w-full h-full object-cover mix-blend-multiply"
+              />
+            </button>
+            <button
+              class="w-1/3 md:w-full aspect-square border border-transparent"
+            >
+              <img
+                src="https://i.pinimg.com/736x/27/09/b2/2709b24d79718b78c5397258615a5b97.jpg"
+                alt=""
+                class="rounded-2xl w-full h-full object-cover mix-blend-multiply"
+              />
+            </button>
+            <button
+              class="w-1/3 md:w-full aspect-square border border-transparent"
+            >
+              <img
+                src="https://i.pinimg.com/1200x/67/33/fd/6733fd99e3a3d341fd5ee48970dce50c.jpg"
+                alt=""
+                class="rounded-2xl w-full h-full object-cover mix-blend-multiply"
+              />
             </button>
           </div>
 
-          <!-- Categories -->
+          <!-- Main image -->
           <div
-            class="space-y-4 border-b border-neutral-300 text-neutral-500 pb-6 mb-6"
+            class="flex-1 overflow-hidden rounded-2xl aspect-4/5 md:aspect-auto bg-cover object-cover bg-center"
           >
-            <!-- Category 1 -->
-            <div class="flex items-center justify-between cursor-pointer group">
-              <span
-                class="text-base hover:text-black transition duration-300 font-medium"
-                >T-Shirts</span
-              >
-              <i
-                class="fa-solid fa-chevron-right opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:text-black"
-              ></i>
-            </div>
-
-            <!-- Category 2 -->
-            <div class="flex items-center justify-between cursor-pointer group">
-              <span
-                class="text-base hover:text-black transition duration-300 font-medium"
-                >Shorts</span
-              >
-              <i
-                class="fa-solid fa-chevron-right hover:text-black opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:text-black"
-              ></i>
-            </div>
-
-            <!-- Category 3-->
-            <div class="flex items-center justify-between cursor-pointer group">
-              <span
-                class="text-base hover:text-black transition duration-300 font-medium"
-                >Shirts</span
-              >
-              <i
-                class="fa-solid fa-chevron-right hover:text-black opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:text-black"
-              ></i>
-            </div>
-
-            <!-- Category 4 -->
-            <div class="flex items-center justify-between cursor-pointer group">
-              <span
-                class="text-base hover:text-black transition duration-300 font-medium"
-                >Hoodie</span
-              >
-              <i
-                class="fa-solid fa-chevron-right hover:text-black opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:text-black"
-              ></i>
-            </div>
-
-            <!-- Category 5 -->
-            <div class="flex items-center justify-between cursor-pointer group">
-              <span
-                class="text-base hover:text-black transition duration-300 font-medium"
-                >Jeans</span
-              >
-              <i
-                class="fa-solid fa-chevron-right hover:text-black opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:text-black"
-              ></i>
-            </div>
+            <img
+              src="https://i.pinimg.com/1200x/5b/b5/6d/5bb56df000ad096e36793e77237df373.jpg"
+              alt=""
+              class="w-full h-full mix-blend-multiply"
+            />
           </div>
+        </div>
 
+        <!-- Product Info -->
+        <div class="flex flex-col gap-4">
+          <h1 class="text-3xl md:text-4xl font-bold font-sans-serif">
+            One Life Graphic T-shirt
+          </h1>
+          <!-- rating -->
+          <div class="flex items-center gap-4">
+            <div class="text-yellow-400">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <p class="text-base text-neutral-500">4.5/5</p>
+          </div>
           <!-- Price -->
-          <div class="border-b border-neutral-400 pb-6 mb-6">
-            <div class="flex items-center justify-between mb-4">
-              <h4 class="text-lg font-medium">Price</h4>
-              <i class="fa-solid fa-chevron-up text-neutral-500 text-sm"></i>
-            </div>
-            <div class="relative h-1.5 bg-gray-200 rounded-full mb-2">
-              <div
-                class="absolute left-1/4 right-1/4 bg-black h-full rounded-full"
-              ></div>
-              <div
-                class="absolute left-1/4 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-black"
-              ></div>
-              <div
-                class="absolute right-1/4 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-black"
-              ></div>
-            </div>
-            <div class="flex items-center justify-around font-medium text-sm">
-              <span>$50</span>
-              <span>$200</span>
+          <div class="flex items-center gap-3">
+            <h4 class="text-2xl md:text-3xl font-bold">$260</h4>
+            <h4
+              class="text-2xl md:text-3xl font-bold text-neutral-400 line-through"
+            >
+              $300
+            </h4>
+            <div class="bg-red-100 px-4 rounded-full">
+              <p class="text-red-400">40%</p>
             </div>
           </div>
+          <p class="text-base text-neutral-500 max-w-xl">
+            This raphic T-shirt which is perfectly for many occasions. Crafted
+            from a soft and breathable fabric, it offers superior confort and
+            style
+          </p>
 
           <!-- Colors -->
-          <div class="border-b border-neutral-400 pb-6 mb-6">
-            <div class="flex items-center justify-between mb-4">
-              <h4 class="font-medium">Colors</h4>
-              <i class="fa-solid fa-chevron-up text-neutral-500 text-sm"></i>
-            </div>
-            <div class="grid grid-cols-5 gap-2">
-              <button class="color-button bg-green-500"></button>
-              <button class="color-button bg-red-500"></button>
-              <button class="color-button bg-yellow-500"></button>
-              <button class="color-button bg-blue-500"></button>
-              <button class="color-button bg-pink-500"></button>
-              <button class="color-button bg-teal-500"></button>
-              <button class="color-button bg-zinc-500"></button>
-              <button class="color-button bg-rose-500"></button>
-              <button class="color-button bg-white-500"></button>
-              <button class="color-button bg-black"></button>
+          <div
+            class="flex flex-col gap-2 border-t-2 border-b-2 border-neutral-300 pt-4 mt-4 pb-6"
+          >
+            <p class="text-base md:text-lg text-neutral-500 font-medium">
+              Select Colors
+            </p>
+            <div class="flex items-center gap-4">
+              <div
+                class="flex items-center justify-center color-button bg-green-500"
+              >
+                <i class="fa-solid fa-check text-white"></i>
+              </div>
+              <div class="color-button bg-red-500"></div>
+              <div class="color-button bg-blue-500"></div>
             </div>
           </div>
 
-          <!-- Sizes -->
-          <div class="border-b border-neutral-300 pb-6 mb-6">
-            <div class="flex items-center justify-between">
-              <h4 class="font-medium mb-4">Sizes</h4>
-              <i class="fa-solid fa-chevron-up text-neutral-500 text-sm"></i>
-            </div>
-            <div class="flex flex-wrap gap-2">
+          <!-- Size -->
+          <div class="space-y-2 border-b-2 border-neutral-300 pb-6 mb-6">
+            <p class="text-base md:text-lg text-neutral-500 font-medium">
+              Choose Size
+            </p>
+            <div class="flex items-center gap-4">
               <button
-                class="text-sm bg-gray-200 py-2 px-3 rounded-full hover:bg-black cursor-pointer hover:text-white transition-colors duration-200"
-              >
-                XX-Small
-              </button>
-              <button
-                class="text-sm bg-gray-200 py-2 px-3 rounded-full hover:bg-black cursor-pointer hover:text-white transition-colors duration-200"
-              >
-                X-Small
-              </button>
-              <button
-                class="text-sm bg-gray-200 py-2 px-3 rounded-full hover:bg-black cursor-pointer hover:text-white transition-colors duration-200"
+                class="bg-gray-200 text-black/80 py-2 px-4 rounded-full text-base font-medium hover:bg-black hover:text-white cursor-pointer transition-colors duration-300"
               >
                 Small
               </button>
               <button
-                class="text-sm bg-gray-200 py-2 px-3 rounded-full hover:bg-black cursor-pointer hover:text-white transition-colors duration-200"
+                class="bg-gray-200 text-black/80 py-2 px-4 rounded-full text-base font-medium hover:bg-black hover:text-white cursor-pointer transition-colors duration-300"
               >
                 Medium
               </button>
               <button
-                class="text-sm bg-gray-200 py-2 px-3 rounded-full hover:bg-black cursor-pointer hover:text-white transition-colors duration-200"
+                class="bg-gray-200 text-black/80 py-2 px-4 rounded-full text-base font-medium hover:bg-black hover:text-white cursor-pointer transition-colors duration-300"
               >
                 Large
               </button>
               <button
-                class="text-sm bg-gray-200 py-2 px-3 rounded-full hover:bg-black cursor-pointer hover:text-white transition-colors duration-200"
+                class="bg-gray-200 text-black/80 py-2 px-4 rounded-full text-base font-medium hover:bg-black hover:text-white cursor-pointer transition-colors duration-300"
               >
                 X-Large
               </button>
-              <button
-                class="text-sm bg-gray-200 py-2 px-3 rounded-full hover:bg-black cursor-pointer hover:text-white transition-colors duration-200"
-              >
-                XX-Large
-              </button>
-              <button
-                class="text-sm bg-gray-200 py-2 px-3 rounded-full hover:bg-black cursor-pointer hover:text-white transition-colors duration-200"
-              >
-                3X-Large
-              </button>
-              <button
-                class="text-sm bg-gray-200 py-2 px-3 rounded-full hover:bg-black cursor-pointer hover:text-white transition-colors duration-200"
-              >
-                4X-Large
-              </button>
             </div>
           </div>
 
-          <!-- Dress Style -->
-          <div>
-            <div class="flex items-center justify-between">
-              <h4 class="font-medium mb-4">Dress Style</h4>
-              <i class="fa-solid fa-chevron-up text-neutral-500 text-sm"></i>
-            </div>
-            <div class="space-y-4 text-neutral-500 mb-4">
-              <!-- Category 1 -->
-              <div
-                class="flex items-center justify-between cursor-pointer group"
-              >
-                <span
-                  class="text-base hover:text-black transition duration-300 font-medium"
-                  >Casual</span
-                >
-                <i
-                  class="fa-solid fa-chevron-right opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:text-black"
-                ></i>
-              </div>
-
-              <!-- Category 2 -->
-              <div
-                class="flex items-center justify-between cursor-pointer group"
-              >
-                <span
-                  class="text-base hover:text-black transition duration-300 font-medium"
-                  >Formal</span
-                >
-                <i
-                  class="fa-solid fa-chevron-right hover:text-black opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:text-black"
-                ></i>
-              </div>
-
-              <!-- Category 3-->
-              <div
-                class="flex items-center justify-between cursor-pointer group"
-              >
-                <span
-                  class="text-base hover:text-black transition duration-300 font-medium"
-                  >Party</span
-                >
-                <i
-                  class="fa-solid fa-chevron-right hover:text-black opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:text-black"
-                ></i>
-              </div>
-
-              <!-- Category 4 -->
-              <div
-                class="flex items-center justify-between cursor-pointer group"
-              >
-                <span
-                  class="text-base hover:text-black transition duration-300 font-medium"
-                  >Gym</span
-                >
-                <i
-                  class="fa-solid fa-chevron-right hover:text-black opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:text-black"
-                ></i>
-              </div>
-            </div>
-            <button
-              class="w-full bg-black text-white py-2 rounded-full cursor-pointer hover:bg-black/80"
-            >
-              Apply Filter
-            </button>
-          </div>
-        </aside>
-
-        <!-- Product Grid Section -->
-        <div class="col-span-1 lg:col-span-9">
-          <!-- Header -->
-          <div class="flex flex-col gap-2 md:flex-row justify-between mb-6">
-            <h2 class="text-2xl md:text-4xl font-bold">Casual</h2>
-            <div class="flex items-center justify-between text-neutral-500">
-              <p>Showing 1-10 of 100 Products</p>
-              <p>
-                Sort by:<span
-                  >Most Popular
-                  <i class="fa-solid fa-chevron-down text-black"></i
-                ></span>
-              </p>
-            </div>
-          </div>
-
-          <!-- Grid Products -->
-          <div
-            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-10"
-          >
-            <!-- Product 1 -->
-            <article class="group cursor-pointer">
-              <div
-                class="bg-[#F0EEED] rounded-4xl aspect-square overflow-hidden p-4 relative mb-4"
-              >
-                <img
-                  src="images/item1.png"
-                  alt=""
-                  class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-300"
-                />
-              </div>
-              <h3 class="text-base font-bold md:text-lg mb-1 truncate">
-                T-shirt with Tape Details
-              </h3>
-              <div class="flex items-center gap-1 mb-2 text-sm">
-                <div class="text-yellow-400 text-xs md:text-sm">
-                  <i class="fa-solid fa-star"></i
-                  ><i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star-half"></i>
-                </div>
-                <span
-                  class="text-neutral-500 text-xs md:text-sm ml-1 font-sans-serif"
-                  >4.5/5</span
-                >
-              </div>
-              <div class="md:text-2xl text-xl font-black font-sans-serif">
-                $120
-              </div>
-            </article>
-            <!-- Product 2 -->
-            <article class="group cursor-pointer">
-              <div
-                class="bg-[#F0EEED] rounded-4xl aspect-square overflow-hidden p-4 relative mb-4"
-              >
-                <img
-                  src="images/item2.png"
-                  alt=""
-                  class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-300"
-                />
-              </div>
-              <h3 class="text-base font-bold md:text-lg mb-1 truncate">
-                Long Sleeve checkered
-              </h3>
-              <div class="flex items-center gap-1 mb-2 text-sm">
-                <div class="text-yellow-400 text-xs md:text-sm">
-                  <i class="fa-solid fa-star"></i
-                  ><i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star-half"></i>
-                </div>
-                <span
-                  class="text-neutral-500 text-xs md:text-sm ml-1 font-sans-serif"
-                  >4.5/5</span
-                >
-              </div>
-              <div class="flex items-center gap-3">
-                <span class="md:text-2xl text-xl font-black font-sans-serif"
-                  >$240</span
-                >
-                <span
-                  class="text-neutral-400 font-bold line-through text-xl md:text-2xl"
-                  >$260</span
-                >
-                <span
-                  class="text-xs bg-red-200 py-1 px-3 rounded-full text-red-500 font-bold"
-                  >-20%</span
-                >
-              </div>
-            </article>
-
-            <!-- Product 3 -->
-            <article class="group cursor-pointer">
-              <div
-                class="bg-[#F0EEED] rounded-4xl aspect-square overflow-hidden p-4 relative mb-4"
-              >
-                <img
-                  src="images/item3.png"
-                  alt=""
-                  class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-300"
-                />
-              </div>
-              <h3 class="text-base font-bold md:text-lg mb-1 truncate">
-                Polo T-shirt
-              </h3>
-              <div class="flex items-center gap-1 mb-2 text-sm">
-                <div class="text-yellow-400 text-xs md:text-sm">
-                  <i class="fa-solid fa-star"></i
-                  ><i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star-half"></i>
-                </div>
-                <span
-                  class="text-neutral-500 text-xs md:text-sm ml-1 font-sans-serif"
-                  >4.5/5</span
-                >
-              </div>
-              <div class="md:text-2xl text-xl font-black font-sans-serif">
-                $180
-              </div>
-            </article>
-
-            <!-- Product 4 -->
-            <article class="group cursor-pointer">
-              <div
-                class="bg-[#F0EEED] rounded-4xl aspect-square overflow-hidden p-4 relative mb-4"
-              >
-                <img
-                  src="images/item4.png"
-                  alt=""
-                  class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-300"
-                />
-              </div>
-              <h3 class="text-base font-bold md:text-lg mb-1 truncate">
-                Hood Jacket
-              </h3>
-              <div class="flex items-center gap-1 mb-2 text-sm">
-                <div class="text-yellow-400 text-xs md:text-sm">
-                  <i class="fa-solid fa-star"></i
-                  ><i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star-half"></i>
-                </div>
-                <span
-                  class="text-neutral-500 text-xs md:text-sm ml-1 font-sans-serif"
-                  >4.5/5</span
-                >
-              </div>
-              <div class="flex items-center gap-3">
-                <span class="md:text-2xl text-xl font-black font-sans-serif"
-                  >$130</span
-                >
-                <span
-                  class="text-neutral-400 font-bold line-through text-xl md:text-2xl"
-                  >$160</span
-                >
-                <span
-                  class="text-xs bg-red-200 py-1 px-3 rounded-full text-red-500 font-bold"
-                  >-30%</span
-                >
-              </div>
-            </article>
-
-            <!-- Product 5 -->
-            <article class="group cursor-pointer">
-              <div
-                class="bg-[#F0EEED] rounded-4xl aspect-square overflow-hidden p-4 relative mb-4"
-              >
-                <img
-                  src="images/item5.png"
-                  alt=""
-                  class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-300"
-                />
-              </div>
-              <h3 class="text-base font-bold md:text-lg mb-1 truncate">
-                Long Sleeve Levis
-              </h3>
-              <div class="flex items-center gap-1 mb-2 text-sm">
-                <div class="text-yellow-400 text-xs md:text-sm">
-                  <i class="fa-solid fa-star"></i
-                  ><i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star-half"></i>
-                </div>
-                <span
-                  class="text-neutral-500 text-xs md:text-sm ml-1 font-sans-serif"
-                  >5.0/5</span
-                >
-              </div>
-              <div class="flex items-center gap-3">
-                <span class="md:text-2xl text-xl font-black font-sans-serif"
-                  >$212</span
-                >
-                <span
-                  class="text-neutral-400 font-bold line-through text-xl md:text-2xl"
-                  >$232</span
-                >
-                <span
-                  class="text-xs bg-red-200 py-1 px-3 rounded-full text-red-500 font-bold"
-                  >-20%</span
-                >
-              </div>
-            </article>
-
-            <!-- Product 6 -->
-            <article class="group cursor-pointer">
-              <div
-                class="bg-[#F0EEED] rounded-4xl aspect-square overflow-hidden p-4 relative mb-4"
-              >
-                <img
-                  src="images/item6.png"
-                  alt=""
-                  class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-300"
-                />
-              </div>
-              <h3 class="text-base font-bold md:text-lg mb-1 truncate">
-                Skinny Jeans
-              </h3>
-              <div class="flex items-center gap-1 mb-2 text-sm">
-                <div class="text-yellow-400 text-xs md:text-sm">
-                  <i class="fa-solid fa-star"></i
-                  ><i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star-half"></i>
-                </div>
-                <span
-                  class="text-neutral-500 text-xs md:text-sm ml-1 font-sans-serif"
-                  >4.0/5</span
-                >
-              </div>
-              <div class="md:text-2xl text-xl font-black font-sans-serif">
-                $145
-              </div>
-            </article>
-
-            <!-- Product 7 -->
-            <article class="group cursor-pointer">
-              <div
-                class="bg-[#F0EEED] rounded-4xl aspect-square overflow-hidden p-4 relative mb-4"
-              >
-                <img
-                  src="images/item7.png"
-                  alt=""
-                  class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-300"
-                />
-              </div>
-              <h3 class="text-base font-bold md:text-lg mb-1 truncate">
-                Hood Jacket Volcom
-              </h3>
-              <div class="flex items-center gap-1 mb-2 text-sm">
-                <div class="text-yellow-400 text-xs md:text-sm">
-                  <i class="fa-solid fa-star"></i
-                  ><i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star-half"></i>
-                </div>
-                <span
-                  class="text-neutral-500 text-xs md:text-sm ml-1 font-sans-serif"
-                  >3.0/5</span
-                >
-              </div>
-              <div class="md:text-2xl text-xl font-black font-sans-serif">
-                $80
-              </div>
-            </article>
-
-            <!-- Product 8 -->
-            <article class="group cursor-pointer">
-              <div
-                class="bg-[#F0EEED] rounded-4xl aspect-square overflow-hidden p-4 relative mb-4"
-              >
-                <img
-                  src="images/item8.png"
-                  alt=""
-                  class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-300"
-                />
-              </div>
-              <h3 class="text-base font-bold md:text-lg mb-1 truncate">
-                Tribal Long Sleeve
-              </h3>
-              <div class="flex items-center gap-1 mb-2 text-sm">
-                <div class="text-yellow-400 text-xs md:text-sm">
-                  <i class="fa-solid fa-star"></i
-                  ><i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star-half"></i>
-                </div>
-                <span
-                  class="text-neutral-500 text-xs md:text-sm ml-1 font-sans-serif"
-                  >4.5/5</span
-                >
-              </div>
-              <div class="md:text-2xl text-xl font-black font-sans-serif">
-                $210
-              </div>
-            </article>
-
-            <!-- Product 9 -->
-            <article class="group cursor-pointer">
-              <div
-                class="bg-[#F0EEED] rounded-4xl aspect-square overflow-hidden p-4 relative mb-4"
-              >
-                <img
-                  src="images/item6.png"
-                  alt=""
-                  class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-300"
-                />
-              </div>
-              <h3 class="text-base font-bold md:text-lg mb-1 truncate">
-                Skinny Jeans
-              </h3>
-              <div class="flex items-center gap-1 mb-2 text-sm">
-                <div class="text-yellow-400 text-xs md:text-sm">
-                  <i class="fa-solid fa-star"></i
-                  ><i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star-half"></i>
-                </div>
-                <span
-                  class="text-neutral-500 text-xs md:text-sm ml-1 font-sans-serif"
-                  >4.0/5</span
-                >
-              </div>
-              <div class="md:text-2xl text-xl font-black font-sans-serif">
-                $145
-              </div>
-            </article>
-          </div>
-
-          <!-- Pagination -->
-          <div
-            class="flex items-center justify-between border-t border-neutral-300 pt-10"
-          >
-            <button
-              class="flex items-center gap-2 border px-4 py-1 rounded-xl border-neutral-300 hover:bg-black hover:text-white transition-all duration-300 cursor-pointer"
-            >
-              <i class="fa-solid fa-arrow-left"></i>
-              <span>Previous</span>
-            </button>
+          <!-- CTA/ Call to Actions -->
+          <div class="flex items-center justify-between gap-6">
             <div
-              class="flex items-center gap-3 cursor-pointer text-neutral-400"
+              class="flex items-center gap-6 bg-gray-200 py-2 px-4 rounded-full cursor-pointer"
             >
-              <span class="hover:text-black">1</span>
-              <span class="hover:text-black">2</span>
-              <span class="hover:text-black">3</span>
-              <span>...</span>
-              <span class="hover:text-black">8</span>
-              <span class="hover:text-black">9</span>
-              <span class="hover:text-black">10</span>
+              <button>
+                <i class="fa-solid fa-minus text-sm cursor-pointer"></i>
+              </button>
+              <span class="text-lg">1</span>
+              <button>
+                <i class="fa-solid fa-plus text-sm cursor-pointer"></i>
+              </button>
             </div>
+
             <button
-              class="flex items-center gap-2 border px-4 py-1 rounded-xl border-neutral-300 hover:bg-black hover:text-white transition-all duration-300 cursor-pointer"
+              class="flex-1 bg-black text-white py-2 px-4 rounded-full cursor-pointer hover:bg-gray-700 transition-colors duration-300"
             >
-              <span>Next</span>
-              <i class="fa-solid fa-arrow-right"></i>
+              Add to Cart
             </button>
           </div>
         </div>
       </div>
+
+      <!-- TABS SECTION -->
+      <section id="tabs" class="pb-20 gap-6">
+        <div
+          class="flex items-center justify-around font-sans-serif border-b border-neutral-300"
+        >
+          <button
+            class="text-gray-500 text-base md:text-x py-4 min-w-[150px] md:min-w-[300px]"
+          >
+            Product Details
+          </button>
+          <button
+            class="text-gray-500 text-base md:text-xl py-4 min-w-[150px] border-b-2 border-black md:min-w-[300px]"
+          >
+            Rating & Reviews
+          </button>
+          <button
+            class="text-gray-500 text-base md:text-xl py-4 min-w-[150px] md:min-w-[300px]"
+          >
+            FAQs
+          </button>
+        </div>
+
+        <!-- Review Header -->
+        <div class="flex items-center justify-between py-4 md:py-6">
+          <div class="flex items-center gap-2">
+            <h4 class="text-base md:text-lg font-medium uppercase">
+              All Reviews
+            </h4>
+            <span class="text-sm font-light text-gray-500">(451)</span>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <button class="rounded-full bg-gray-300 w-10 h-10">
+              <i class="fa-solid fa-sliders text-neutral-600"></i>
+            </button>
+            <button
+              class="hidden md:flex items-center gap-2 rounded-full bg-neutral-300 py-2 px-5"
+            >
+              <span>Latest</span>
+              <i class="fa-solid fa-chevron-down text-xs"></i>
+            </button>
+            <button
+              class="bg-black text-white py-2 px-6 rounded-full text-base"
+            >
+              Write a Review
+            </button>
+          </div>
+        </div>
+
+        <!-- Grid Review -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+          <!-- Review Card 1 -->
+          <article
+            class="border border-neutral-300 p-4 md:p-8 space-y-2 rounded-2xl shadow-lg"
+          >
+            <!-- rating -->
+            <div class="flex items-center justify-between">
+              <div class="text-base md:text-xl text-yellow-400">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half"></i>
+              </div>
+              <!-- dots -->
+              <i class="fa-solid fa-ellipsis text-xl"></i>
+            </div>
+            <div class="flex items-center gap-4">
+              <h4 class="font-medium text-lg md:text-xl">Samantha D.</h4>
+              <div
+                class="flex items-center justify-center h-4 w-4 p-3 rounded-full bg-green-400"
+              >
+                <i class="fa-solid fa-check text-xs text-white"></i>
+              </div>
+            </div>
+            <p class="text-base md:text-xl text-neutral-500">
+              "I absolutely love this t-shirt! The design is unique and the
+              fabric feels so comfortable. As a fellow designer, I appreciate
+              the attention to detail. It's become my favorite go-to shirt."
+            </p>
+
+            <h5 class="pt-4 pb-2 text-base md:text-xl text-neutral-500">
+              Posted on Augus 14, 2023
+            </h5>
+          </article>
+
+          <!-- Review Card 2 -->
+          <article
+            class="border border-neutral-300 p-4 md:p-8 space-y-2 rounded-2xl shadow-lg"
+          >
+            <!-- rating -->
+            <div class="flex items-center justify-between">
+              <div class="text-base md:text-xl text-yellow-400">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half"></i>
+              </div>
+              <!-- dots -->
+              <i class="fa-solid fa-ellipsis text-xl"></i>
+            </div>
+            <div class="flex items-center gap-4">
+              <h4 class="font-medium text-lg md:text-xl">Ethan R.</h4>
+              <div
+                class="flex items-center justify-center h-4 w-4 p-3 rounded-full bg-green-400"
+              >
+                <i class="fa-solid fa-check text-xs text-white"></i>
+              </div>
+            </div>
+            <p class="text-base md:text-xl text-neutral-500">
+              "This t-shirt is a must-have for anyone who appreciates good
+              design. The minimalist yet stylish pattern caught my eye, and the
+              fit is perfect. I can see the designer's touch in every aspect of
+              this shirt."
+            </p>
+
+            <h5 class="pt-4 pb-2 text-base md:text-xl text-neutral-500">
+              Posted on Augus 14, 2023
+            </h5>
+          </article>
+
+          <!-- Review Card 3 -->
+          <article
+            class="border border-neutral-300 p-4 md:p-8 space-y-2 rounded-2xl shadow-lg"
+          >
+            <!-- rating -->
+            <div class="flex items-center justify-between">
+              <div class="text-base md:text-xl text-yellow-400">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half"></i>
+              </div>
+              <!-- dots -->
+              <i class="fa-solid fa-ellipsis text-xl"></i>
+            </div>
+            <div class="flex items-center gap-4">
+              <h4 class="font-medium text-lg md:text-xl">Alex M.</h4>
+              <div
+                class="flex items-center justify-center h-4 w-4 p-3 rounded-full bg-green-400"
+              >
+                <i class="fa-solid fa-check text-xs text-white"></i>
+              </div>
+            </div>
+            <p class="text-base md:text-xl text-neutral-500">
+              "The t-shirt exceeded my expectations! The colors are vibrant and
+              the print quality is top-notch. Being a UI/UX designer myself, I'm
+              quite picky about aesthetics, and this t-shirt definitely gets a
+              thumbs up from me."
+            </p>
+
+            <h5 class="pt-4 pb-2 text-base md:text-xl text-neutral-500">
+              Posted on Augus 14, 2023
+            </h5>
+          </article>
+
+          <!-- Review Card 4 -->
+          <article
+            class="hidden md:block border border-neutral-300 p-4 md:p-8 space-y-2 rounded-2xl shadow-lg"
+          >
+            <!-- rating -->
+            <div class="flex items-center justify-between">
+              <div class="text-base md:text-xl text-yellow-400">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half"></i>
+              </div>
+              <!-- dots -->
+              <i class="fa-solid fa-ellipsis text-xl"></i>
+            </div>
+            <div class="flex items-center gap-4">
+              <h4 class="font-medium text-lg md:text-xl">Olivia P.</h4>
+              <div
+                class="flex items-center justify-center h-4 w-4 p-3 rounded-full bg-green-400"
+              >
+                <i class="fa-solid fa-check text-xs text-white"></i>
+              </div>
+            </div>
+            <p class="text-base md:text-xl text-neutral-500">
+              "As a UI/UX enthusiast, I value simplicity and functionality. This
+              t-shirt not only represents those principles but also feels great
+              to wear. It's evident that the designer poured their creativity
+              into making this t-shirt stand out."
+            </p>
+
+            <h5 class="pt-4 pb-2 text-base md:text-xl text-neutral-500">
+              Posted on Augus 14, 2023
+            </h5>
+          </article>
+
+          <!-- Review Card 5 -->
+          <article
+            class="hidden md:block border border-neutral-300 p-4 md:p-8 space-y-2 rounded-2xl shadow-lg"
+          >
+            <!-- rating -->
+            <div class="flex items-center justify-between">
+              <div class="text-base md:text-xl text-yellow-400">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half"></i>
+              </div>
+              <!-- dots -->
+              <i class="fa-solid fa-ellipsis text-xl"></i>
+            </div>
+            <div class="flex items-center gap-4">
+              <h4 class="font-medium text-lg md:text-xl">Sam M.</h4>
+              <div
+                class="flex items-center justify-center h-4 w-4 p-3 rounded-full bg-green-400"
+              >
+                <i class="fa-solid fa-check text-xs text-white"></i>
+              </div>
+            </div>
+            <p class="text-base md:text-xl text-neutral-500">
+              "I absolutely love this t-shirt! The design is unique and the
+              fabric feels so comfortable. As a fellow designer, I appreciate
+              the attention to detail. It's become my favorite go-to shirt."
+            </p>
+
+            <h5 class="pt-4 pb-2 text-base md:text-xl text-neutral-500">
+              Posted on Augus 14, 2023
+            </h5>
+          </article>
+
+          <!-- Review Card 6 -->
+          <article
+            class="hidden md:block border border-neutral-300 p-4 md:p-8 space-y-2 rounded-2xl shadow-lg"
+          >
+            <!-- rating -->
+            <div class="flex items-center justify-between">
+              <div class="text-base md:text-xl text-yellow-400">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half"></i>
+              </div>
+              <!-- dots -->
+              <i class="fa-solid fa-ellipsis text-xl"></i>
+            </div>
+            <div class="flex items-center gap-4">
+              <h4 class="font-medium text-lg md:text-xl">Gianna V.</h4>
+              <div
+                class="flex items-center justify-center h-4 w-4 p-3 rounded-full bg-green-400"
+              >
+                <i class="fa-solid fa-check text-xs text-white"></i>
+              </div>
+            </div>
+            <p class="text-base md:text-xl text-neutral-500">
+              "I absolutely love this t-shirt! The design is unique and the
+              fabric feels so comfortable. As a fellow designer, I appreciate
+              the attention to detail. It's become my favorite go-to shirt."
+            </p>
+
+            <h5 class="pt-4 pb-2 text-base md:text-xl text-neutral-500">
+              Posted on Sept 14, 2024
+            </h5>
+          </article>
+        </div>
+
+        <div class="flex justify-center">
+          <button
+            class="bg-white text-black text-base font-medium py-2 md:py-3 px-6 mt-10 w-full rounded-full border border-gray-300 md:w-auto hover:bg-black hover:text-white cursor-pointer transition-all duration-200"
+          >
+            Load More Reviews
+          </button>
+        </div>
+      </section>
+
+      <section class="container-custom pb-20">
+        <h2 class="section-title uppercase">You Might also Like</h2>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          <!-- Product 1 -->
+          <article class="group cursor-pointer">
+            <div
+              class="bg-[#F0EEED] rounded-4xl aspect-square overflow-hidden p-4 relative mb-4"
+            >
+              <img
+                src="images/item1.png"
+                alt=""
+                class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-300"
+              />
+            </div>
+            <h3 class="text-base font-bold md:text-lg mb-1 truncate">
+              T-shirt with Tape Details
+            </h3>
+            <div class="flex items-center gap-1 mb-2 text-sm">
+              <div class="text-yellow-400 text-xs md:text-sm">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half"></i>
+              </div>
+              <span
+                class="text-neutral-500 text-xs md:text-sm ml-1 font-sans-serif"
+                >4.5/5</span
+              >
+            </div>
+            <div class="md:text-2xl text-xl font-black font-sans-serif">
+              $120
+            </div>
+          </article>
+
+          <!-- Product 2 -->
+          <article class="group cursor-pointer">
+            <div
+              class="bg-[#F0EEED] rounded-4xl aspect-square overflow-hidden p-4 relative mb-4"
+            >
+              <img
+                src="images/item2.png"
+                alt=""
+                class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-300"
+              />
+            </div>
+            <h3 class="text-base font-bold md:text-lg mb-1 truncate">
+              Long Sleeve checkered
+            </h3>
+            <div class="flex items-center gap-1 mb-2 text-sm">
+              <div class="text-yellow-400 text-xs md:text-sm">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half"></i>
+              </div>
+              <span
+                class="text-neutral-500 text-xs md:text-sm ml-1 font-sans-serif"
+                >4.5/5</span
+              >
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="md:text-2xl text-xl font-black font-sans-serif"
+                >$240</span
+              >
+              <span
+                class="text-neutral-400 font-bold line-through text-xl md:text-2xl"
+                >$260</span
+              >
+              <span
+                class="text-xs bg-red-200 py-1 px-3 rounded-full text-red-500 font-bold"
+                >-20%</span
+              >
+            </div>
+          </article>
+
+          <!-- Product 3 -->
+          <article class="group cursor-pointer">
+            <div
+              class="bg-[#F0EEED] rounded-4xl aspect-square overflow-hidden p-4 relative mb-4"
+            >
+              <img
+                src="images/item3.png"
+                alt=""
+                class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-300"
+              />
+            </div>
+            <h3 class="text-base font-bold md:text-lg mb-1 truncate">
+              Polo T-shirt
+            </h3>
+            <div class="flex items-center gap-1 mb-2 text-sm">
+              <div class="text-yellow-400 text-xs md:text-sm">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half"></i>
+              </div>
+              <span
+                class="text-neutral-500 text-xs md:text-sm ml-1 font-sans-serif"
+                >4.5/5</span
+              >
+            </div>
+            <div class="md:text-2xl text-xl font-black font-sans-serif">
+              $180
+            </div>
+          </article>
+
+          <!-- Product 4 -->
+          <article class="group cursor-pointer">
+            <div
+              class="bg-[#F0EEED] rounded-4xl aspect-square overflow-hidden p-4 relative mb-4"
+            >
+              <img
+                src="images/item4.png"
+                alt=""
+                class="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-300"
+              />
+            </div>
+            <h3 class="text-base font-bold md:text-lg mb-1 truncate">
+              Hood Jacket
+            </h3>
+            <div class="flex items-center gap-1 mb-2 text-sm">
+              <div class="text-yellow-400 text-xs md:text-sm">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half"></i>
+              </div>
+              <span
+                class="text-neutral-500 text-xs md:text-sm ml-1 font-sans-serif"
+                >4.5/5</span
+              >
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="md:text-2xl text-xl font-black font-sans-serif"
+                >$130</span
+              >
+              <span
+                class="text-neutral-400 font-bold line-through text-xl md:text-2xl"
+                >$160</span
+              >
+              <span
+                class="text-xs bg-red-200 py-1 px-3 rounded-full text-red-500 font-bold"
+                >-30%</span
+              >
+            </div>
+          </article>
+        </div>
+      </section>
     </main>
 
     <!-- Footer Wrapper -->
-    <div class="bg-[#F0F0F1] relative mt-20">
+    <div class="bg-[#F0F0F1] relative mt-40">
       <!-- NEWSLETTER SECTION -->
       <section class="container mx-auto px-6 -translate-y-1/2">
         <div class="bg-black text-white p-6 md:pt-12 md:px-30 rounded-2xl">
@@ -896,7 +867,7 @@
         <div
           class="flex flex-col md:flex-row items-center justify-between mt-5"
         >
-          <p class="mb-3">Shop.co @2000-2023 All Rights Reserved</p>
+          <p>Shop.co @2000-2023 All Rights Reserved</p>
           <div class="flex items-center gap-2">
             <div href="#" class="px-3 rounded-lg bg-white">
               <i class="fa-brands fa-cc-visa text-lg"></i>

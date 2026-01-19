@@ -8,6 +8,11 @@
   --breakpoints-xl: 1280px;
   --breakpoints-2xl: 1536px;
 
+  /* Custom Colors */
+  --color-primary: #000000;
+  --color-secondary: #f0f0f0;
+  --color-accent: #ff3333;
+
   /* Custom Font */
   --font-sans-serif: 'Roboto', sans-serif;
 
